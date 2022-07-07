@@ -1,0 +1,5 @@
+.Navbar {
+    grid-column: span 2;
+    background-color: red;
+    height: 5vh;
+}
