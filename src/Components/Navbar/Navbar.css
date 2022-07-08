@@ -1,5 +1,84 @@
 .Navbar {
     grid-column: span 2;
-    background-color: red;
-    height: 5vh;
+    height: 6vh;
+    padding: 12px 1.5em;
+}
+.Navbar-Components {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.Navbar-Left {
+    display: flex;
+    align-items: center;
+    flex-basis: 14%;
+    margin-right: auto;
+    height: 35px;
+}
+.Navbar-LogoContainer {
+    display: flex;
+    align-items: center;
+    margin-left: 1.8em;
+    color: #000;
+}
+.Navbar-Name {
+    display: flex;
+    align-items: center;
+}
+.Navbar-Name p {
+    margin-bottom: 18px;
+    font-size: .7em;
+    opacity: .8;
+}
+
+.Navbar-Middle {
+    display: flex;
+    align-items: center;
+    flex-basis: 36%;
+}
+.Navbar-Form {
+    flex-basis: 91%;
+    border: 1px solid #000;
+    height: 35px;
+    border-radius: 3px;
+    display: flex;
+}
+.Navbar-Form input {
+    border: none;
+    display: inline-block;
+    flex-basis: 90%;
+    padding-left: 8px;
+    font-size: 1.1em;
+}
+.Navbar-Form-SearchBtn {
+    border-left: 1px solid #000;
+    height: inherit;
+    padding: 6px;
+    flex-basis: 10%;
+}
+.Navbar-Microphone {
+    background-color: var(--ash);
+    height: 30px;
+    flex-basis: 5%;
+    border-radius: 50%;
+    padding: 4px;
+    margin-left: 5px;
+    color: #000;
+}
+
+.Navbar-Right {
+    flex-basis: 11.4%;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 35px;
+    /* background-color: red; */
+}
+
+.Navbar-Grid {
+    margin-right: auto;
+}
+.Navbar-Dots {
+    margin-right: .8em;
 }

@@ -1,0 +1,27 @@
+.Button {
+    border: 1px solid var(--button-color);
+    color: var(--button-color);
+    text-transform: uppercase;
+    padding: 5px 10px;
+    font-size: 1.1em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    width: 120px;
+}
+.Button_thick {
+    border-width: 2px;
+}
+
+.Icon {
+    font-size: 1.2em;
+}
+.Icon_bars {
+    font-size: 1.5em;
+}
+.Icon_logo {
+    color: red;
+    font-size: 2em;
+    margin-right: 1px;
+}

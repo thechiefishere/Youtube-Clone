@@ -1,5 +1,4 @@
 .Home {
     display: grid;
-    grid-template-columns: 12% 87.8%;
-    gap: 2px;
+    grid-template-columns: 12% 88%;
 }
