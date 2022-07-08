@@ -13,15 +13,17 @@
 .Button_thick {
     border-width: 2px;
 }
-
 .Icon {
     font-size: 1.2em;
 }
 .Icon_bars {
-    font-size: 1.5em;
+    font-size: 1.4em;
 }
 .Icon_logo {
     color: red;
     font-size: 2em;
     margin-right: 1px;
+}
+.Icon_sidebar {
+    font-size: 1.4em;
 }

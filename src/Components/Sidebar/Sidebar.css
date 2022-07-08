@@ -1,3 +1,10 @@
 .Sidebar {
-    background-color: green;
+    margin: 10px 0px;
+}
+.Sidebar-Line {
+    width: 98%;
+    height: .5px;
+    background-color: var(--sidebar-line);
+    margin-top: 15px;
+    margin-left: 1%;
 }

@@ -1,0 +1,12 @@
+.SidebarDuo {
+    display: flex;
+    align-items: center;
+    margin: 12px 1.4em;
+    /* margin-bottom: 13px; */
+}
+.SidebarDuo-Logo {
+    margin-right: 1.5em;
+}
+.SidebarDuo-Name {
+    font-size: 14px;
+}
