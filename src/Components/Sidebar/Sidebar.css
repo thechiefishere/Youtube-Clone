@@ -1,5 +1,7 @@
 .Sidebar {
-    margin: 10px 0px;
+    padding-left: 1.4em;
+    margin-bottom: 20px;
+    overflow-y: scroll;
 }
 .Sidebar-Line {
     width: 98%;
@@ -7,4 +9,24 @@
     background-color: var(--sidebar-line);
     margin-top: 15px;
     margin-left: 1%;
+}
+.Sidebar-Section {
+    margin-top: 20px;
+}
+.Sidebar-SignIn-Text {
+    margin-bottom: 10px;
+}
+.Sidebar-DetailsList {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+.Sidebar-DetailsList > p {
+    margin-right: 8px;
+    font-size: 13;
+    font-weight: 500;
+    opacity: .6;
+}
+.Sidebar-Details > p {
+    opacity: .4;
 }

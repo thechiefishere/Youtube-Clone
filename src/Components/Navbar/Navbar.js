@@ -10,6 +10,7 @@ import {
   FaRegUserCircle,
 } from 'react-icons/fa';
 import { BsGrid3X3Gap } from 'react-icons/bs';
+import SignInBtn from '../SignInBtn/SignInBtn';
 
 export class Navbar extends Component {
   renderLeftContent() {
@@ -50,10 +51,7 @@ export class Navbar extends Component {
       <aside className='Navbar-Right'>
         <BsGrid3X3Gap className='Icon Navbar-Grid' />
         <FaEllipsisV className='Icon Navbar-Dots' />
-        <button className='Button Button_thick'>
-          <FaRegUserCircle className='Icon' />
-          sign in
-        </button>
+        <SignInBtn />
       </aside>
     );
   }

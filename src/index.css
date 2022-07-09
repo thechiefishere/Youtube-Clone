@@ -9,6 +9,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  line-height: 20px;
 }
 
 body {
@@ -16,8 +17,23 @@ body {
   color: var(--black);
     font-family: 'Roboto', Arial, sans-serif;
     font-weight: 400;
+    font-size: 14px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 5px;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, .25);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: #8b8ba8;
 }
 
 code {
