@@ -74,11 +74,13 @@ export const channelData = [
   {
     channelId: 1,
     channelName: 'EveryDay Astronaut',
-    dateCreated: new Date('March 22, 2010 12:00:30'),
+    joined: new Date('November 23, 2013 12:00:30'),
     isVerified: true,
     subscribers: 1293030,
     videosPosted: 354,
-    quote: 'Rocket science. A term we all use to describe',
+    totalViews: 161948695,
+    description:
+      "Rocket science. A term we all use to describe something incredibly difficult. Trying to grasp all of the concepts involved in rocket science can be incredibly intimidating. My name’s Tim Dodd but I'm better known as the Everyday Astronaut. Recently I fell head over heels in love with spaceflight. My appreciation and curiosity for the subject grew into an obsession. Before you knew it, all I wanted to do was learn more and more... the more I learned, the more I wanted to share what was making me so excited. But as someone who dropped out of college and has no technical background or degree… I really felt unqualified for the job of explaining rocket science to anyone. But the fact of the matter is, if I can learn this stuff, anyone can. Rocket science is awesome, and you don’t need to be a rocket scientist to be excited. Everyday Astronaut. Bringing space down to Earth for everyday people.",
     channelVideos: [
       {
         videoId: 1,
@@ -90,7 +92,7 @@ export const channelData = [
         disLikes: 2080,
         comments: [
           {
-            channelId: 9,
+            channelId: 3,
             comment:
               '2 years later, we learned the biggest difference is that one of them actually works :)',
             likes: 1000,
@@ -99,21 +101,21 @@ export const channelData = [
             timePosted: new Date('July 9, 2021 4:25:30'),
             replies: [
               {
-                channelId: 10,
+                channelId: 2,
                 reply: 'Yup haha',
                 likes: 14,
                 disLikes: 3,
                 timePosted: new Date('July 9, 2021 6:50:30'),
               },
               {
-                channelId: 7,
+                channelId: 6,
                 reply: 'They pushed back starliner again',
                 likes: 18,
                 disLikes: 0,
                 timePosted: new Date('July 9, 2021 19:25:30'),
               },
               {
-                channelId: 3,
+                channelId: 5,
                 reply:
                   "came to make this comment myself, didn't leave disappointed",
                 likes: 22,
@@ -140,7 +142,7 @@ export const channelData = [
                 timePosted: new Date('July 9, 2020 12:50:30'),
               },
               {
-                channelId: 7,
+                channelId: 3,
                 reply: 'This comment thread turned very political....',
                 likes: 19,
                 disLikes: 0,
@@ -160,7 +162,7 @@ export const channelData = [
         disLikes: 300,
         comments: [
           {
-            channelId: 2,
+            channelId: 3,
             comment:
               'The raptor architecture is the highest effeciency known to physics. We should be able to get 99% combustion effeciency. 99% of combustion effeciency…  with devine intervention you could do 1% better." Speechless! ',
             likes: 91,
@@ -170,7 +172,7 @@ export const channelData = [
             replies: [],
           },
           {
-            channelId: 8,
+            channelId: 2,
             comment:
               'Tim is a legend of YouTube he has taken himself from having an appreciation for rocketry to having a full blown understanding of rockets and rocket engine knowledge. What a great path he has laid.',
             likes: 166,
@@ -187,7 +189,7 @@ export const channelData = [
                 timePosted: new Date('July 9, 2022 16:50:30'),
               },
               {
-                channelId: 7,
+                channelId: 4,
                 reply:
                   'rockets can be used using coca cola or co2 but not sure why nobody is doing it',
                 likes: 1,
@@ -203,11 +205,13 @@ export const channelData = [
   {
     channelId: 2,
     channelName: 'Web Dev Simplified',
-    dateCreated: new Date('April 9, 2014 12:40:30'),
+    joined: new Date('May 24, 2018 12:40:30'),
     isVerified: true,
-    subscribers: 976700,
+    subscribers: 977500,
     videosPosted: 463,
-    quote: 'Web Dev Simplified is all about teaching web',
+    totalViews: 68414725,
+    quote:
+      'Web Dev Simplified is all about teaching web development skills and techniques in an efficient and practical manner. If you are just getting started in web development Web Dev Simplified has all the tools you need to learn the newest and most popular technologies to convert you from a no stack to full stack developer. Web Dev Simplified also deep dives into advanced topics using the latest best practices for you seasoned web developers. I started Web Dev Simplified in order to share my passion for web development, and do what I truly love. Teach and inspire new web developers. I have been in love with full stack web development since 2015 when I did my first internship as a web developer. Ever since then I have pursued my passion, learning everything there is to know about web development. Over the years I have taught many colleagues and friends the joys of web development, and cannot wait to teach you. Thank you for watching!',
     channelVideos: [
       {
         videoId: 3,
@@ -317,11 +321,12 @@ export const channelData = [
   {
     channelId: 3,
     channelName: 'PowerfulJRE',
-    dateCreated: new Date('September 3, 2008 6:00:30'),
+    dateCreated: new Date('January 12, 2013 6:00:30'),
     isVerified: true,
     subscribers: 12600305,
     videosPosted: 742,
     quote: 'The Joe Rogan Experience podcast',
+    totalViews: 2191894865,
     channelVideos: [
       {
         videoId: 5,
@@ -342,14 +347,14 @@ export const channelData = [
             timePosted: new Date('May 17, 2018 12:25:30'),
             replies: [
               {
-                channelId: 7,
+                channelId: 1,
                 reply: 'Man of Tai Chi that’s a fantastic read more',
                 likes: 193,
                 disLikes: 90,
                 timePosted: new Date('May 17, 2018 14:25:39'),
               },
               {
-                channelId: 7,
+                channelId: 6,
                 reply:
                   'He was on vacation in England. Have you seen Monty python? 😂😂😂',
                 likes: 172,
@@ -417,7 +422,7 @@ export const channelData = [
                 timePosted: new Date('July 8, 2022 23:25:30'),
               },
               {
-                channelId: 6,
+                channelId: 5,
                 reply: 'But if it feeeels human?',
                 likes: 104,
                 disLikes: 3,
@@ -426,7 +431,7 @@ export const channelData = [
             ],
           },
           {
-            channelId: 8,
+            channelId: 4,
             comment:
               'Couldn’t it also be that there are no “happy” A.I. films because the ones that don’t explore it as a negative force are exploring what it is to be alive? And sadness is a huge part of that. Films like Bicentennial Man, Johnny 5, Wall-E, Robots, they’re not totally happy go lucky films because suffering and questioning are part of what it means to be alive.',
             likes: 40,
@@ -443,7 +448,7 @@ export const channelData = [
                 timePosted: new Date('July 9, 2022 19:50:30'),
               },
               {
-                channelId: 9,
+                channelId: 5,
                 reply:
                   "If it's a machine, it isn't alive.  It's not that complicated.",
                 likes: 0,
@@ -458,12 +463,14 @@ export const channelData = [
   },
   {
     channelId: 4,
-    channelName: 'PowerfulJRE',
-    dateCreated: new Date('February 3, 2012 6:00:30'),
+    channelName: 'Traversy Media',
+    dateCreated: new Date('October 30, 2009 6:00:30'),
     isVerified: true,
     subscribers: 1893475,
     videosPosted: 923,
-    quote: 'Traversy Media features the best online web',
+    description:
+      'Traversy Media features the best online web development and programming tutorials for all of the latest web technologies from the building blocks of HTML, CSS & JavaScript to frontend frameworks like React and Vue to backend technologies like Node.js, Python and PHP',
+    totalViews: 177373588,
     channelVideos: [
       {
         videoId: 7,
@@ -538,7 +545,7 @@ export const channelData = [
             timePosted: new Date('June 30, 2022 22:25:30'),
             replies: [
               {
-                channelId: 1,
+                channelId: 3,
                 reply: 'Same for me! It blew my mind',
                 likes: 2,
                 disLikes: 0,
@@ -563,11 +570,13 @@ export const channelData = [
   {
     channelId: 5,
     channelName: 'SpaceX',
-    dateCreated: new Date('November 3, 2006 6:00:30'),
+    dateCreated: new Date('July 20, 2008 6:00:30'),
     isVerified: true,
     subscribers: 6006680,
     videosPosted: 398,
-    quote: 'SpaceX designs, manufactures and launches',
+    description:
+      'SpaceX designs, manufactures and launches the world’s most advanced rockets and spacecraft',
+    totalViews: 621246264,
     channelVideos: [
       {
         videoId: 9,
@@ -648,7 +657,7 @@ export const channelData = [
                 timePosted: new Date('November 1, 2021 3:50:30'),
               },
               {
-                channelId: 3,
+                channelId: 5,
                 reply: "Spacex's Engineers are phenomenal",
                 likes: 77,
                 disLikes: 6,
