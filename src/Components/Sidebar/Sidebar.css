@@ -1,7 +1,7 @@
 .Sidebar {
+    display: none;
     margin-bottom: 20px;
     overflow-y: scroll;
-    width: 0px;
 }
 .Sidebar_shw {
     width: inherit;

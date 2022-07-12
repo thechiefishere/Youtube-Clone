@@ -1,5 +1,10 @@
 .Home {
+    /* display: grid; */
+    /* grid-template-columns: 13% 87%; */
+    /* height: 100vh; */
+}
+/* .Home {
     display: grid;
     grid-template-columns: 13% 87%;
     height: 100vh;
-}
+} */

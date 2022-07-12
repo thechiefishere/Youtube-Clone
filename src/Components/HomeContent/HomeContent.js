@@ -14,9 +14,9 @@ export class HomeContent extends Component {
           <FaAngleLeft className='Icon Icon_homeContentFilter' />
           <div className='HomeContent-FilterWrapper'>
             {filters.map((filter, index) => (
-              <span key={index} className='HomeContent-Filter'>
+              <p key={index} className='HomeContent-Filter'>
                 {filter}
-              </span>
+              </p>
             ))}
           </div>
           <FaAngleRight className='Icon Icon_homeContentFilter' />
