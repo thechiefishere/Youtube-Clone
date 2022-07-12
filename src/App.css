@@ -27,3 +27,42 @@
 .Icon_sidebar {
     font-size: 1.7em;
 }
+.Icon_homeContentFilter {
+    background-color: #fff;
+    padding: 10px;
+    position: absolute;
+    top: 0px;
+    width: 80px;
+    height: 40px;
+    border-radius: 35%;
+}
+.Icon_homeContentFilter:first-of-type {
+    left: 0;
+}
+.Icon_homeContentFilter:last-of-type {
+    right: 0;
+}
+.Youtube-LogoContainer {
+    display: flex;
+    align-items: center;
+    margin-left: 1.8em;
+    color: #000;
+}
+.Youtube-Name {
+    display: flex;
+    align-items: center;
+}
+.Youtube-Name p {
+    margin-bottom: 18px;
+    font-size: .7em;
+    opacity: .8;
+}
+.Youtube-LogoContainer_advert {
+    margin-left: 0px;
+    margin-bottom: 10px;
+}
+.Line {
+    width: 100%;
+    height: .5px;
+    background-color: var(--sidebar-line);
+}

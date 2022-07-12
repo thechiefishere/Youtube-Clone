@@ -79,6 +79,7 @@ export const channelData = [
     subscribers: 1293030,
     videosPosted: 354,
     totalViews: 161948695,
+    image: '/images/channelImage/image1.jpg',
     description:
       "Rocket science. A term we all use to describe something incredibly difficult. Trying to grasp all of the concepts involved in rocket science can be incredibly intimidating. My name’s Tim Dodd but I'm better known as the Everyday Astronaut. Recently I fell head over heels in love with spaceflight. My appreciation and curiosity for the subject grew into an obsession. Before you knew it, all I wanted to do was learn more and more... the more I learned, the more I wanted to share what was making me so excited. But as someone who dropped out of college and has no technical background or degree… I really felt unqualified for the job of explaining rocket science to anyone. But the fact of the matter is, if I can learn this stuff, anyone can. Rocket science is awesome, and you don’t need to be a rocket scientist to be excited. Everyday Astronaut. Bringing space down to Earth for everyday people.",
     channelVideos: [
@@ -90,6 +91,7 @@ export const channelData = [
         views: 4008275,
         likes: 54590,
         disLikes: 2080,
+        thumbnail: '/images/thumbnails/thumbnail1.png',
         comments: [
           {
             channelId: 3,
@@ -160,6 +162,7 @@ export const channelData = [
         views: 262316,
         likes: 18020,
         disLikes: 300,
+        thumbnail: '/images/thumbnails/thumbnail2.png',
         comments: [
           {
             channelId: 3,
@@ -210,6 +213,7 @@ export const channelData = [
     subscribers: 977500,
     videosPosted: 463,
     totalViews: 68414725,
+    image: '/images/channelImage/image2.jpg',
     quote:
       'Web Dev Simplified is all about teaching web development skills and techniques in an efficient and practical manner. If you are just getting started in web development Web Dev Simplified has all the tools you need to learn the newest and most popular technologies to convert you from a no stack to full stack developer. Web Dev Simplified also deep dives into advanced topics using the latest best practices for you seasoned web developers. I started Web Dev Simplified in order to share my passion for web development, and do what I truly love. Teach and inspire new web developers. I have been in love with full stack web development since 2015 when I did my first internship as a web developer. Ever since then I have pursued my passion, learning everything there is to know about web development. Over the years I have taught many colleagues and friends the joys of web development, and cannot wait to teach you. Thank you for watching!',
     channelVideos: [
@@ -221,6 +225,7 @@ export const channelData = [
         views: 12176,
         likes: 599,
         disLikes: 46,
+        thumbnail: '/images/thumbnails/thumbnail3.png',
         comments: [
           {
             channelId: 3,
@@ -268,6 +273,7 @@ export const channelData = [
         views: 1932755,
         likes: 60040,
         disLikes: 246,
+        thumbnail: '/images/thumbnails/thumbnail4.png',
         comments: [
           {
             channelId: 2,
@@ -326,6 +332,7 @@ export const channelData = [
     subscribers: 12600305,
     videosPosted: 742,
     quote: 'The Joe Rogan Experience podcast',
+    image: '/images/channelImage/image3.jpg',
     totalViews: 2191894865,
     channelVideos: [
       {
@@ -336,6 +343,7 @@ export const channelData = [
         views: 10154689,
         likes: 190456,
         disLikes: 28900,
+        thumbnail: '/images/thumbnails/thumbnail5.png',
         comments: [
           {
             channelId: 2,
@@ -404,6 +412,7 @@ export const channelData = [
         views: 1923176,
         likes: 36789,
         disLikes: 2190,
+        thumbnail: '/images/thumbnails/thumbnail6.png',
         comments: [
           {
             channelId: 6,
@@ -468,6 +477,7 @@ export const channelData = [
     isVerified: true,
     subscribers: 1893475,
     videosPosted: 923,
+    image: '/images/channelImage/image4.jpg',
     description:
       'Traversy Media features the best online web development and programming tutorials for all of the latest web technologies from the building blocks of HTML, CSS & JavaScript to frontend frameworks like React and Vue to backend technologies like Node.js, Python and PHP',
     totalViews: 177373588,
@@ -480,6 +490,7 @@ export const channelData = [
         views: 2804490,
         likes: 55060,
         disLikes: 1259,
+        thumbnail: '/images/thumbnails/thumbnail7.png',
         comments: [
           {
             channelId: 1,
@@ -534,6 +545,7 @@ export const channelData = [
         views: 21934,
         likes: 1390,
         disLikes: 12,
+        thumbnail: '/images/thumbnails/thumbnail8.png',
         comments: [
           {
             channelId: 1,
@@ -574,6 +586,7 @@ export const channelData = [
     isVerified: true,
     subscribers: 6006680,
     videosPosted: 398,
+    image: '/images/channelImage/image5.jpg',
     description:
       'SpaceX designs, manufactures and launches the world’s most advanced rockets and spacecraft',
     totalViews: 621246264,
@@ -586,6 +599,7 @@ export const channelData = [
         views: 4660994,
         likes: 79456,
         disLikes: 12800,
+        thumbnail: '/images/thumbnails/thumbnail9.png',
         comments: [
           {
             channelId: 2,
@@ -639,6 +653,7 @@ export const channelData = [
         views: 2040320,
         likes: 136700,
         disLikes: 8909,
+        thumbnail: '/images/thumbnails/thumbnail10.png',
         comments: [
           {
             channelId: 6,
@@ -703,6 +718,7 @@ export const channelData = [
     subscribers: 12200900,
     videosPosted: 334,
     totalViews: 1718379234,
+    image: '/images/channelImage/image1.jpg',
     description:
       'An element of truth - videos about science, education, and anything else I find interesting.',
     channelVideos: [
@@ -714,6 +730,7 @@ export const channelData = [
         views: 12839136,
         likes: 514890,
         disLikes: 33200,
+        thumbnail: '/images/thumbnails/thumbnail11.png',
         comments: [
           {
             channelId: 5,
@@ -786,6 +803,7 @@ export const channelData = [
         views: 4973651,
         likes: 43560,
         disLikes: 8909,
+        thumbnail: '/images/thumbnails/thumbnail12.png',
         comments: [
           {
             channelId: 2,
@@ -843,4 +861,28 @@ export const channelData = [
       },
     ],
   },
+];
+
+export const filters = [
+  'All',
+  'Gaming',
+  'Algorithm',
+  'CSS',
+  'Javascript',
+  'React',
+  'React Native',
+  'Tesla',
+  'Rocket',
+  'Thoughts',
+  'Web Design',
+  'Pyton',
+  'Java',
+  'Live',
+  'Comedy',
+  'Computers',
+  'API',
+  'Data Structure',
+  'Elon Musk',
+  'Tesla',
+  'Jordan Peterson',
 ];

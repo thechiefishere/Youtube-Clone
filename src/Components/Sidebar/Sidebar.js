@@ -13,7 +13,7 @@ export class Sidebar extends Component {
         {defaults.map((obj, index) => (
           <SidebarDuo key={index} data={obj} />
         ))}
-        <div className='Sidebar-Line'></div>
+        <div className='Line'></div>
       </section>
     );
   }
@@ -25,7 +25,7 @@ export class Sidebar extends Component {
         {info.map((obj, index) => (
           <SidebarDuo key={index} data={obj} />
         ))}
-        <div className='Sidebar-Line'></div>
+        <div className='Line'></div>
       </section>
     );
   }
@@ -37,7 +37,7 @@ export class Sidebar extends Component {
           Sign in to like videos, comment, and subscribe.
         </p>
         <SignInBtn />
-        <div className='Sidebar-Line'></div>
+        <div className='Line'></div>
       </section>
     );
   }
@@ -49,7 +49,7 @@ export class Sidebar extends Component {
         {best.map((obj, index) => (
           <SidebarDuo key={index} data={obj} shade={true} />
         ))}
-        <div className='Sidebar-Line'></div>
+        <div className='Line'></div>
       </section>
     );
   }
@@ -61,7 +61,7 @@ export class Sidebar extends Component {
         {channels.map((obj, index) => (
           <SidebarDuo key={index} data={obj} />
         ))}
-        <div className='Sidebar-Line'></div>
+        <div className='Line'></div>
       </section>
     );
   }
@@ -73,7 +73,7 @@ export class Sidebar extends Component {
         {more.map((obj, index) => (
           <SidebarDuo key={index} data={obj} />
         ))}
-        <div className='Sidebar-Line'></div>
+        <div className='Line'></div>
       </section>
     );
   }
@@ -85,7 +85,7 @@ export class Sidebar extends Component {
         {general.map((obj, index) => (
           <SidebarDuo key={index} data={obj} />
         ))}
-        <div className='Sidebar-Line'></div>
+        <div className='Line'></div>
       </section>
     );
   }

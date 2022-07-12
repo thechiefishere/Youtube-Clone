@@ -7,7 +7,6 @@ import {
   FaSearch,
   FaMicrophone,
   FaEllipsisV,
-  FaRegUserCircle,
 } from 'react-icons/fa';
 import { BsGrid3X3Gap } from 'react-icons/bs';
 import SignInBtn from '../SignInBtn/SignInBtn';
@@ -17,11 +16,11 @@ export class Navbar extends Component {
     return (
       <aside className='Navbar-Left'>
         <FaBars className='Icon Icon_bars' />
-        <div className='Navbar-LogoContainer'>
+        <div className='Youtube-LogoContainer'>
           <FaYoutube className='Icon Icon_logo' />
-          <div className='Navbar-Name'>
+          <div className='Youtube-Name'>
             <h1>YouTube</h1>
-            <p className='Navbar-Country'>NG</p>
+            <p className='Youtube-Country'>NG</p>
           </div>
         </div>
       </aside>

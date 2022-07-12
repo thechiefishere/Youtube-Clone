@@ -3,13 +3,13 @@
     margin-bottom: 20px;
     overflow-y: scroll;
 }
-.Sidebar-Line {
+/* .Sidebar-Line {
     width: 98%;
     height: .5px;
     background-color: var(--sidebar-line);
     margin-top: 15px;
     margin-left: 1%;
-}
+} */
 .Sidebar-Section {
     margin-top: 20px;
 }

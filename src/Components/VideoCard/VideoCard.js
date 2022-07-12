@@ -14,14 +14,14 @@ export class VideoCard extends Component {
       views,
       time,
       isVerified,
-    } = this.props.info;
+    } = this.props.videoInfo;
     return (
-      <div>
-        <div className='VideoCard-ThumbnailContainer'>
+      <div className='VideoCard'>
+        <div className='VideoCard-Video'>
           <img src={thumbnail} alt={videoName} />
           <p>{videoLength}</p>
         </div>
-        <div>
+        <div className='VideoCard-Description'>
           <img src={channelPicture} alt={channelName} />
           <div>
             <p>{videoName}</p>
@@ -41,7 +41,7 @@ export class VideoCard extends Component {
   }
 
   render() {
-    return <section>VideoCard</section>;
+    return <section>{this.renderCard()}</section>;
   }
 }
 
