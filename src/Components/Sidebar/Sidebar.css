@@ -1,15 +1,12 @@
 .Sidebar {
-    padding-left: 1.4em;
     margin-bottom: 20px;
     overflow-y: scroll;
+    width: 0px;
 }
-/* .Sidebar-Line {
-    width: 98%;
-    height: .5px;
-    background-color: var(--sidebar-line);
-    margin-top: 15px;
-    margin-left: 1%;
-} */
+.Sidebar_shw {
+    width: inherit;
+    padding-left: 1.4em;
+}
 .Sidebar-Section {
     margin-top: 20px;
 }

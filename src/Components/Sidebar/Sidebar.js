@@ -5,6 +5,8 @@ import { sidebarData } from '../../data';
 import SidebarDuo from '../SidebarDuo/SidebarDuo';
 import SignInBtn from '../SignInBtn/SignInBtn';
 
+import { connect } from 'react-redux';
+
 export class Sidebar extends Component {
   renderDefaults() {
     const { defaults } = sidebarData;
@@ -115,8 +117,11 @@ export class Sidebar extends Component {
   }
 
   renderSidebar() {
+    const { showSidebar } = this.props;
+    const show = showSidebar && 'Sidebar_show';
+
     return (
-      <section>
+      <section className={`Sidebar ${show}`}>
         {this.renderDefaults()}
         {this.renderInfo()}
         {this.renderSignIn()}
@@ -130,8 +135,14 @@ export class Sidebar extends Component {
   }
 
   render() {
-    return <aside className='Sidebar'>{this.renderSidebar()}</aside>;
+    return <aside>{this.renderSidebar()}</aside>;
   }
 }
 
-export default Sidebar;
+const mapStateToProps = (state) => {
+  return {
+    showSidebar: state.navbarReducer.showSidebar,
+  };
+};
+
+export default connect(mapStateToProps)(Sidebar);

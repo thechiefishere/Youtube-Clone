@@ -875,7 +875,7 @@ export const filters = [
   'Rocket',
   'Thoughts',
   'Web Design',
-  'Pyton',
+  'Python',
   'Java',
   'Live',
   'Comedy',
