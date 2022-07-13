@@ -8,10 +8,12 @@
     align-items: center;
     justify-content: space-between;
     background-color: #fff;
-    width: 105px;
 }
 .Button_thick {
     border-width: 2px;
+}
+.Icon_button {
+    margin-right: 7px;
 }
 .Icon {
     font-size: 1.2em;

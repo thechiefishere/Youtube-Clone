@@ -7,7 +7,7 @@ export class SignInBtn extends Component {
   render() {
     return (
       <button className='Button Button_thick'>
-        <FaRegUserCircle className='Icon' />
+        <FaRegUserCircle className='Icon Icon_button' />
         sign in
       </button>
     );

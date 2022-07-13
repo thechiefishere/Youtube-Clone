@@ -16,7 +16,7 @@ export class VideoCard extends Component {
       isVerified,
     } = this.props.videoInfo;
     return (
-      <div className='VideoCard'>
+      <div>
         <div className='VideoCard-Video'>
           <img src={thumbnail} alt={videoName} />
           <p>{videoLength}</p>
@@ -41,7 +41,7 @@ export class VideoCard extends Component {
   }
 
   render() {
-    return <section>{this.renderCard()}</section>;
+    return <section className='VideoCard'>{this.renderCard()}</section>;
   }
 }
 
