@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import './Sidebar.css';
+import './OpenSidebar.css';
 
-import { sidebarData } from '../../data';
-import SidebarDuo from '../SidebarDuo/SidebarDuo';
-import SignInBtn from '../SignInBtn/SignInBtn';
+import { sidebarData } from '../../../data';
+import SignInBtn from '../../SignInBtn/SignInBtn';
+import SidebarElement from '../SidebarElement/SidebarElement';
 
 import { connect } from 'react-redux';
 
@@ -11,9 +11,9 @@ export class Sidebar extends Component {
   renderDefaults() {
     const { defaults } = sidebarData;
     return (
-      <section className='Sidebar-Section'>
+      <section className='OpenSidebar-Section'>
         {defaults.map((obj, index) => (
-          <SidebarDuo key={index} data={obj} />
+          <SidebarElement key={index} data={obj} />
         ))}
         <div className='Line'></div>
       </section>
@@ -23,9 +23,9 @@ export class Sidebar extends Component {
   renderInfo() {
     const { info } = sidebarData;
     return (
-      <section className='Sidebar-Section'>
+      <section className='OpenSidebar-Section'>
         {info.map((obj, index) => (
-          <SidebarDuo key={index} data={obj} />
+          <SidebarElement key={index} data={obj} />
         ))}
         <div className='Line'></div>
       </section>
@@ -34,8 +34,8 @@ export class Sidebar extends Component {
 
   renderSignIn() {
     return (
-      <section className='Sidebar-Section'>
-        <p className='Sidebar-SignIn-Text'>
+      <section className='OpenSidebar-Section'>
+        <p className='OpenSidebar-SignIn-Text'>
           Sign in to like videos, comment, and subscribe.
         </p>
         <SignInBtn />
@@ -47,9 +47,9 @@ export class Sidebar extends Component {
   renderBest() {
     const { best } = sidebarData;
     return (
-      <section className='Sidebar-Section'>
+      <section className='OpenSidebar-Section'>
         {best.map((obj, index) => (
-          <SidebarDuo key={index} data={obj} shade={true} />
+          <SidebarElement key={index} data={obj} shade={true} />
         ))}
         <div className='Line'></div>
       </section>
@@ -59,9 +59,9 @@ export class Sidebar extends Component {
   renderChannels() {
     const { channels } = sidebarData;
     return (
-      <section className='Sidebar-Section'>
+      <section className='OpenSidebar-Section'>
         {channels.map((obj, index) => (
-          <SidebarDuo key={index} data={obj} />
+          <SidebarElement key={index} data={obj} />
         ))}
         <div className='Line'></div>
       </section>
@@ -71,9 +71,9 @@ export class Sidebar extends Component {
   renderMore() {
     const { more } = sidebarData;
     return (
-      <section className='Sidebar-Section'>
+      <section className='OpenSidebar-Section'>
         {more.map((obj, index) => (
-          <SidebarDuo key={index} data={obj} />
+          <SidebarElement key={index} data={obj} />
         ))}
         <div className='Line'></div>
       </section>
@@ -83,9 +83,9 @@ export class Sidebar extends Component {
   renderGeneral() {
     const { general } = sidebarData;
     return (
-      <section className='Sidebar-Section'>
+      <section className='OpenSidebar-Section'>
         {general.map((obj, index) => (
-          <SidebarDuo key={index} data={obj} />
+          <SidebarElement key={index} data={obj} />
         ))}
         <div className='Line'></div>
       </section>
@@ -94,7 +94,7 @@ export class Sidebar extends Component {
 
   renderCompanyDetails() {
     return (
-      <section className='Sidebar-Section Sidebar-Details'>
+      <section className='OpenSidebar-Section Sidebar-Details'>
         <div className='Sidebar-DetailsList'>
           <p>About</p>
           <p>Press</p>
@@ -104,7 +104,7 @@ export class Sidebar extends Component {
           <p>Advertise</p>
           <p>Developers</p>
         </div>
-        <div className='Sidebar-DetailsList'>
+        <div className='OpenSidebar-DetailsList'>
           <p>Terms</p>
           <p>Privacy</p>
           <p>Policy &amp; Safety</p>
@@ -116,12 +116,12 @@ export class Sidebar extends Component {
     );
   }
 
-  renderSidebar() {
+  renderOpenSidebar() {
     const { showSidebar } = this.props;
-    const show = showSidebar && 'Sidebar_show';
+    const show = showSidebar && 'OpenSidebar_show';
 
     return (
-      <section className={`Sidebar ${show}`}>
+      <section className={`OpenSidebar ${show}`}>
         {this.renderDefaults()}
         {this.renderInfo()}
         {this.renderSignIn()}
@@ -135,7 +135,7 @@ export class Sidebar extends Component {
   }
 
   render() {
-    return <aside>{this.renderSidebar()}</aside>;
+    return <aside>{this.renderOpenSidebar()}</aside>;
   }
 }
 

@@ -26,6 +26,22 @@
 
     }
 }
+
+@media (min-width: 888px) {
+    .VideoCard {
+        width: 32%;
+        margin: 15px 0;
+
+    }
+}
+
+@media (min-width: 1146px) {
+    .VideoCard {
+        width: 24%;
+        margin: 15px 0;
+
+    }
+}
 /* .VideoCard {
     width: 360px;
     margin-bottom: 25px;

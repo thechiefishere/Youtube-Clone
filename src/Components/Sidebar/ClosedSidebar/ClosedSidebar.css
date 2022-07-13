@@ -1,0 +1,9 @@
+.ClosedSidebar {
+    display: none;
+}
+@media (min-width: 792px) {
+    .ClosedSidebar {
+        display: block;
+        width: 100%;
+    }
+}

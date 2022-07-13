@@ -1,5 +1,5 @@
-.Sidebar {
-    display: none;
+.OpenSidebar {
+    /* display: none; */
     margin-bottom: 20px;
     overflow-y: scroll;
 }
@@ -7,23 +7,23 @@
     width: inherit;
     padding-left: 1.4em;
 }
-.Sidebar-Section {
+.OpenSidebar-Section {
     margin-top: 20px;
 }
-.Sidebar-SignIn-Text {
+.OpenSidebar-SignIn-Text {
     margin-bottom: 10px;
 }
-.Sidebar-DetailsList {
+.OpenSidebar-DetailsList {
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 10px;
 }
-.Sidebar-DetailsList > p {
+.OpenSidebar-DetailsList > p {
     margin-right: 8px;
     font-size: 13;
     font-weight: 500;
     opacity: .6;
 }
-.Sidebar-Details > p {
+.OpenSidebar-Details > p {
     opacity: .4;
 }

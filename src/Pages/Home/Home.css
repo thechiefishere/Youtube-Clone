@@ -1,10 +1,7 @@
-.Home {
-    /* display: grid; */
-    /* grid-template-columns: 13% 87%; */
-    /* height: 100vh; */
+@media (min-width: 792px) {
+    .Home {
+        display: grid; 
+        grid-template-columns: 72px calc(100% - 72px);
+    }
 }
-/* .Home {
-    display: grid;
-    grid-template-columns: 13% 87%;
-    height: 100vh;
-} */
+

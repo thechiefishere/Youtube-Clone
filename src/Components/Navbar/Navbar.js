@@ -39,6 +39,7 @@ export class Navbar extends Component {
   renderSearchBox() {
     return (
       <form className='Navbar-Form'>
+        <FaSearch className='Icon Navbar-Form-SearchBtn' />
         <input type='text' placeholder='Search' className='Navbar-Input' />
         <FaSearch className='Icon Navbar-Form-SearchBtn' />
       </form>
