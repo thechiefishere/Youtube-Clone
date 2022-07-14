@@ -1,7 +1,13 @@
+
 @media (min-width: 792px) {
     .Home {
-        display: grid; 
+        display: grid;
         grid-template-columns: 72px calc(100% - 72px);
     }
 }
 
+@media (min-width: 1314px) {
+    .Home {
+        grid-template-columns: 240px calc(100% - 240px);
+    }
+}

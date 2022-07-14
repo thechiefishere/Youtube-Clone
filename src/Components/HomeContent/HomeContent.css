@@ -1,7 +1,3 @@
-.HomeContent {
-    /* background-color: yellow; */
-    /* min-height: 94vh; */
-}
 .HomeContent-FilterContainer {
     background-color: #fff;
     width: 100%;
@@ -60,6 +56,9 @@
 }
 
 @media (min-width: 512px) {
+    .HomeContent-AdvertDescription {
+        margin-bottom: 50px;
+    }
     .HomeContent-VideosContainer {
         display: flex;
         justify-content: space-between;
@@ -71,5 +70,17 @@
 @media (min-width: 600px) {
     .HomeContent-VideosContainer {
         padding: 0px 4%;
+    }
+}
+
+@media (min-width: 792) {
+    .HomeContent-VideosContainer {
+        width: calc(100% - 72px);
+    }
+}
+
+@media (min-width: 1314px) {
+    .HomeContent {
+        display: block;
     }
 }

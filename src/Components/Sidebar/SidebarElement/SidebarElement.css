@@ -1,38 +1,29 @@
-.SidebarElement {
+.SidebarElementClose {
     margin: 12px 0px;
     text-align: center;
 
   }
-.SidebarElement-Logo_shade {
-    padding: 8px;
-    padding-bottom: 4px;
-    padding-top: 10px;
-    border-radius: 50%;
-    background-color: #000;
-    font-size: .8em;
-    color: #fff;
-}
-.SidebarElement-Name {
+.SidebarElementClose > p {
     font-size: 10px;
-}
+  }
 
-/* .SidebarElement {
+.SidebarElementOpen {
     display: flex;
     align-items: center;
     margin: 12px 0px;
 }
-.SidebarElement-Logo {
+.SidebarElementOpen > div {
     margin-right: 1.8em;
 }
 .SidebarElement-Logo_shade {
-    padding: 5px;
-    padding-bottom: 4px;
-    padding-top: 10px;
+    padding: 2px;
+    padding-bottom: 2px;
+    padding-top: 8px;
     border-radius: 50%;
     background-color: #000;
     font-size: .8em;
     color: #fff;
 }
-.SidebarElement-Name {
+.SidebarElementOpen > p {
     font-size: 14px;
-} */
+}

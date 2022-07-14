@@ -18,11 +18,12 @@ body {
   font-family: 'Roboto', Arial, sans-serif;
   font-weight: 400;
   font-size: 14px;
+  /* overflow-x: hidden; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* ::-webkit-scrollbar {
+::-webkit-scrollbar {
   width: 8px;
 }
 
@@ -34,7 +35,7 @@ body {
 ::-webkit-scrollbar-thumb {
   border-radius: 5px;
   background-color: #8b8ba8;
-} */
+}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',

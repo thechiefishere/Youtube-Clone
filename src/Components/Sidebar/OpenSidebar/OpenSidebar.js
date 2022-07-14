@@ -13,7 +13,7 @@ export class Sidebar extends Component {
     return (
       <section className='OpenSidebar-Section'>
         {defaults.map((obj, index) => (
-          <SidebarElement key={index} data={obj} />
+          <SidebarElement key={index} data={obj} from={'open'} />
         ))}
         <div className='Line'></div>
       </section>
@@ -25,7 +25,7 @@ export class Sidebar extends Component {
     return (
       <section className='OpenSidebar-Section'>
         {info.map((obj, index) => (
-          <SidebarElement key={index} data={obj} />
+          <SidebarElement key={index} data={obj} from={'open'} />
         ))}
         <div className='Line'></div>
       </section>
@@ -49,7 +49,7 @@ export class Sidebar extends Component {
     return (
       <section className='OpenSidebar-Section'>
         {best.map((obj, index) => (
-          <SidebarElement key={index} data={obj} shade={true} />
+          <SidebarElement key={index} data={obj} shade={true} from={'open'} />
         ))}
         <div className='Line'></div>
       </section>
@@ -61,7 +61,7 @@ export class Sidebar extends Component {
     return (
       <section className='OpenSidebar-Section'>
         {channels.map((obj, index) => (
-          <SidebarElement key={index} data={obj} />
+          <SidebarElement key={index} data={obj} from={'open'} />
         ))}
         <div className='Line'></div>
       </section>
@@ -73,7 +73,7 @@ export class Sidebar extends Component {
     return (
       <section className='OpenSidebar-Section'>
         {more.map((obj, index) => (
-          <SidebarElement key={index} data={obj} />
+          <SidebarElement key={index} data={obj} from={'open'} />
         ))}
         <div className='Line'></div>
       </section>
@@ -85,7 +85,7 @@ export class Sidebar extends Component {
     return (
       <section className='OpenSidebar-Section'>
         {general.map((obj, index) => (
-          <SidebarElement key={index} data={obj} />
+          <SidebarElement key={index} data={obj} from={'open'} />
         ))}
         <div className='Line'></div>
       </section>
@@ -94,8 +94,8 @@ export class Sidebar extends Component {
 
   renderCompanyDetails() {
     return (
-      <section className='OpenSidebar-Section Sidebar-Details'>
-        <div className='Sidebar-DetailsList'>
+      <section className='OpenSidebar-Section OpenSidebar-Details'>
+        <div className='OpenSidebar-DetailsList'>
           <p>About</p>
           <p>Press</p>
           <p>Copyright</p>
@@ -121,7 +121,7 @@ export class Sidebar extends Component {
     const show = showSidebar && 'OpenSidebar_show';
 
     return (
-      <section className={`OpenSidebar ${show}`}>
+      <section className={`OpenSidebar-Container ${show}`}>
         {this.renderDefaults()}
         {this.renderInfo()}
         {this.renderSignIn()}
@@ -135,7 +135,7 @@ export class Sidebar extends Component {
   }
 
   render() {
-    return <aside>{this.renderOpenSidebar()}</aside>;
+    return <aside className='OpenSidebar'>{this.renderOpenSidebar()}</aside>;
   }
 }
 

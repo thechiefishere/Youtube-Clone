@@ -12,6 +12,7 @@ export class Home extends Component {
       <main className='Home'>
         <Navbar />
         <ClosedSidebar />
+        <OpenSidebar />
         <HomeContent />
       </main>
     );

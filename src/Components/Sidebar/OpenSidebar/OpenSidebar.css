@@ -1,11 +1,12 @@
 .OpenSidebar {
-    /* display: none; */
-    margin-bottom: 20px;
+    display: none;
+    margin-bottom: 190px;
     overflow-y: scroll;
+    height: 100vh;
+    padding-left: 1.7em;
 }
-.Sidebar_shw {
-    width: inherit;
-    padding-left: 1.4em;
+.OpenSidebar-Container {
+    margin-bottom: 100px;
 }
 .OpenSidebar-Section {
     margin-top: 20px;
@@ -26,4 +27,10 @@
 }
 .OpenSidebar-Details > p {
     opacity: .4;
+}
+
+@media (min-width: 1314px) {
+    .OpenSidebar {
+        display: block;
+    }
 }

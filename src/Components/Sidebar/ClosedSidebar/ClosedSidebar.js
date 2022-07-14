@@ -4,15 +4,13 @@ import './ClosedSidebar.css';
 import SidebarElement from '../SidebarElement/SidebarElement';
 import { sidebarData } from '../../../data';
 
-import { connect } from 'react-redux';
-
 export class ClosedSidebar extends Component {
   renderDefaults() {
     const { defaults } = sidebarData;
     return (
       <section className='ClosedSidebar-Section'>
         {defaults.map((obj, index) => (
-          <SidebarElement key={index} data={obj} />
+          <SidebarElement key={index} data={obj} from={'closed'} />
         ))}
       </section>
     );
@@ -23,7 +21,7 @@ export class ClosedSidebar extends Component {
     return (
       <section className='ClosedSidebar-Section'>
         {info.map((obj, index) => (
-          <SidebarElement key={index} data={obj} />
+          <SidebarElement key={index} data={obj} from={'closed'} />
         ))}
       </section>
     );
