@@ -1,7 +1,7 @@
 .VideoCard {
     width: 82%;
-    /* margin: 0 auto; */
     margin: 25px 8%;
+    z-index: 1;
 }
 .VideoCard-Video {
     position: relative;

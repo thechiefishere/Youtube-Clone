@@ -32,7 +32,7 @@ export class ClosedSidebar extends Component {
     const show = showSidebar && 'ClosedSidebar_show';
 
     return (
-      <section className={`ClosedSidebar ${show}`}>
+      <section className={`ClosedSidebar-Container ${show}`}>
         {this.renderDefaults()}
         {this.renderInfo()}
       </section>

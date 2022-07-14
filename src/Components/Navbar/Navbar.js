@@ -58,10 +58,12 @@ export class Navbar extends Component {
 
   renderNavbar() {
     return (
-      <section className='Navbar-Components'>
-        {this.renderLeftContent()}
-        {this.renderMiddleContent()}
-        {this.renderRightContent()}
+      <section className='Navbar-Container'>
+        <section className='Navbar-Components'>
+          {this.renderLeftContent()}
+          {this.renderMiddleContent()}
+          {this.renderRightContent()}
+        </section>
       </section>
     );
   }

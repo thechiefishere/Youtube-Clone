@@ -7,6 +7,24 @@ import VideoCard from '../VideoCard/VideoCard';
 import { FaAngleLeft, FaAngleRight, FaYoutube, FaTimes } from 'react-icons/fa';
 
 export class HomeContent extends Component {
+  componentDidMount() {
+    window.addEventListener('scroll', this.handleScroll);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll);
+  }
+
+  handleScroll() {
+    const filter = document.querySelector('.HomeContent-FilterContainer');
+    const container = document.querySelector('.HomeContent-Container');
+    const filterBottom = filter.getBoundingClientRect().y;
+    const containerTop = container.getBoundingClientRect().y;
+
+    const difference = `${filterBottom - containerTop}px`;
+    document.documentElement.style.setProperty('--beforeHeight', difference);
+  }
+
   renderFilters() {
     return (
       <section className='HomeContent-FilterSection'>
@@ -63,8 +81,10 @@ export class HomeContent extends Component {
         <div className='Line'></div>
         {this.renderFilters()}
         <div className='Line'></div>
-        {this.renderAdvert()}
-        {this.renderVideoTiles()}
+        <div className='HomeContent-Container'>
+          {this.renderAdvert()}
+          {this.renderVideoTiles()}
+        </div>
       </section>
     );
   }

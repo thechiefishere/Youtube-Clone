@@ -1,6 +1,12 @@
 .Navbar {
-    height: 6vh;
+    height: 5vh;
+    z-index: 2;
+}
+.Navbar-Container {
+    position: fixed;
+    width: 100%;
     padding: 1vh 1.5em;
+
 }
 .Navbar-Components {
     display: flex;

@@ -3,6 +3,7 @@
   --ash: rgb(238, 236, 236);
   --black: #030303;
   --sidebar-line: rgb(219, 213, 213);
+  --beforeHeight: 0px;
 }
 
 * {

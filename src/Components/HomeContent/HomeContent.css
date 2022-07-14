@@ -4,6 +4,8 @@
     position: relative;
     margin-top: 10px;
     margin-bottom: 10px;
+    position: fixed;
+    z-index: 2;
 }
 .HomeContent-FilterWrapper {
     background-color: #fff;
@@ -23,10 +25,26 @@
     background-color: #000;
     color: #fff;
 }
+.HomeContent-Container {
+    position: relative;
+    z-index: 1;
+}
+.HomeContent-Container::before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: var(--beforeHeight);
+    background-color: #fff;
+    z-index: 2;
+}
+
 .HomeContent-Advert {
     display: flex;
+    margin-top: 30px;
     padding: 20px;
     padding-left: 50px;
+    z-index: 1;
 }
 .HomeContent-AdvertDetail {
     width: 85%;
