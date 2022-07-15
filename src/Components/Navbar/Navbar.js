@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './Navbar.css';
 
+import { connect } from 'react-redux';
+
 import {
   FaBars,
   FaYoutube,
@@ -10,12 +12,15 @@ import {
 } from 'react-icons/fa';
 import { BsGrid3X3Gap } from 'react-icons/bs';
 import SignInBtn from '../SignInBtn/SignInBtn';
+import { toggleSidebar } from '../../Redux/actions';
 
 export class Navbar extends Component {
   renderLeftContent() {
+    const { toggleSidebar } = this.props;
+
     return (
       <aside className='Navbar-Left'>
-        <FaBars className='Icon Icon_bars' />
+        <FaBars className='Icon Icon_bars' onClick={() => toggleSidebar()} />
         <div className='Youtube-LogoContainer'>
           <FaYoutube className='Icon Icon_logo' />
           <div className='Youtube-Name'>
@@ -73,4 +78,10 @@ export class Navbar extends Component {
   }
 }
 
-export default Navbar;
+const mapDispatchToProps = (dispatch) => {
+  return {
+    toggleSidebar: () => dispatch(toggleSidebar()),
+  };
+};
+
+export default connect(null, mapDispatchToProps)(Navbar);

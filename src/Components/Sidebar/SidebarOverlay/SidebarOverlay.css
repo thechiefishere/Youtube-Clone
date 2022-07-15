@@ -1,0 +1,29 @@
+.SidebarOverlay {
+    width: 0%;
+    height: 100vh;
+    height: 0px;
+    z-index: 3;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    transition: .01s ease-in;
+}
+.SidebarOverlay_show {
+    width: 100%;
+}
+.SidebarOverlay-Opaque {
+    opacity: .5;
+    height: 100vh;
+    width: calc(100% - 240px);
+    background-color: #000;
+    position: absolute;
+    top: 0px;
+    left: 240px;
+    font-size: 2em;
+}
+
+@media (min-width: 1314px) {
+    .SidebarOverlay {
+        display: none;
+    }
+}

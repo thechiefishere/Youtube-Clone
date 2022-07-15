@@ -1,8 +1,7 @@
 import { TOGGLE_SIDEBAR } from '../actionTypes';
 
 const initialState = {
-  showSidebar: true,
-  cash: 500,
+  showSidebar: false,
 };
 
 export const navbarReducer = (state = initialState, actions) => {

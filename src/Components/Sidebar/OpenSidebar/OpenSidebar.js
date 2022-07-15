@@ -117,8 +117,9 @@ export class Sidebar extends Component {
   }
 
   renderOpenSidebar() {
-    const { showSidebar } = this.props;
-    const show = showSidebar && 'OpenSidebar_show';
+    const { showSidebar, type } = this.props;
+    const mini = type === 'mini' && 'OpenSidebar-Container_mini';
+    const show = showSidebar && 'OpenSidebar-Container_show';
 
     return (
       <section className={`OpenSidebar-Container ${show}`}>
@@ -135,7 +136,15 @@ export class Sidebar extends Component {
   }
 
   render() {
-    return <aside className='OpenSidebar'>{this.renderOpenSidebar()}</aside>;
+    const { showSidebar, type } = this.props;
+    const mini = type === 'mini' && 'OpenSidebar_mini';
+    const show = showSidebar && 'OpenSidebar_show';
+
+    return (
+      <aside className={`OpenSidebar ${mini} ${show}`}>
+        {this.renderOpenSidebar()}
+      </aside>
+    );
   }
 }
 

@@ -1,3 +1,6 @@
+.HomeContent {
+    /* z-index: -1; */
+}
 .HomeContent-FilterContainer {
     background-color: #fff;
     width: 100%;
