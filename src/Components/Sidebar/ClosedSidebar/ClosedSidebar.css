@@ -1,5 +1,6 @@
 .ClosedSidebar {
     display: none;
+    margin-top: 15px;
 }
 
 .ClosedSidebar-Container {
@@ -15,5 +16,9 @@
 @media (min-width: 1314px) {
     .ClosedSidebar {
         display: none;
+    }
+    .ClosedSidebar_show {
+        display: block;
+        width: 72px;
     }
 }

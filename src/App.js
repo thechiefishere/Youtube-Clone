@@ -8,7 +8,6 @@ class App extends Component {
   render() {
     return (
       <main className='App'>
-        {console.log('show', this.props.show)}
         <Home />
         <SidebarOverlay />
       </main>

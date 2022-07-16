@@ -1,13 +1,14 @@
 import { TOGGLE_SIDEBAR } from '../actionTypes';
 
 const initialState = {
-  showSidebar: false,
+  sidebarState: -1,
 };
 
-export const navbarReducer = (state = initialState, actions) => {
-  switch (actions.type) {
+export const navbarReducer = (state = initialState, action) => {
+  switch (action.type) {
     case TOGGLE_SIDEBAR: {
-      return { ...state, showSidebar: !state.showSidebar };
+      const newState = state.sidebarState <= 0 ? 1 : 0;
+      return { ...state, sidebarState: newState };
     }
     default:
       return state;

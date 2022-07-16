@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import './ClosedSidebar.css';
+import { connect } from 'react-redux';
 
 import SidebarElement from '../SidebarElement/SidebarElement';
 import { sidebarData } from '../../../data';
@@ -28,8 +29,8 @@ export class ClosedSidebar extends Component {
   }
 
   renderClosedSidebar() {
-    const { showSidebar } = this.props;
-    const show = showSidebar && 'ClosedSidebar_show';
+    const { sidebarState } = this.props;
+    const show = sidebarState > 0 && 'ClosedSidebar_show';
 
     return (
       <section className={`ClosedSidebar-Container ${show}`}>
@@ -40,10 +41,21 @@ export class ClosedSidebar extends Component {
   }
 
   render() {
+    const { sidebarState } = this.props;
+    const show = sidebarState === 0 && 'ClosedSidebar_show';
+
     return (
-      <section className='ClosedSidebar'>{this.renderClosedSidebar()}</section>
+      <section className={`ClosedSidebar ${show}`}>
+        {this.renderClosedSidebar()}
+      </section>
     );
   }
 }
 
-export default ClosedSidebar;
+const mapStateToProps = (state) => {
+  return {
+    sidebarState: state.navbarReducer.sidebarState,
+  };
+};
+
+export default connect(mapStateToProps)(ClosedSidebar);

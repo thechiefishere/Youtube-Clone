@@ -6,13 +6,14 @@ import OpenSidebar from '../OpenSidebar/OpenSidebar';
 
 export class SidebarOverlay extends Component {
   render() {
-    const { showSidebar } = this.props;
-    const show = showSidebar && 'SidebarOverlay_show';
-    console.log('show', show);
+    const { sidebarState } = this.props;
+    console.log('sidebarState', sidebarState);
+    const show = sidebarState > 0 && 'SidebarOverlay_show';
+    const sidebar = sidebarState > 0 && 'SidebarOverlay-OpenSidebar_show';
 
     return (
       <section className={`SidebarOverlay ${show}`}>
-        <div className='SidebarOverlay-OpenSidebar'>
+        <div className={`SidebarOverlay-OpenSidebar ${sidebar}`}>
           <OpenSidebar type='mini' />
         </div>
         <div className='SidebarOverlay-Opaque'></div>
@@ -23,7 +24,7 @@ export class SidebarOverlay extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    showSidebar: state.navbarReducer.showSidebar,
+    sidebarState: state.navbarReducer.sidebarState,
   };
 };
 

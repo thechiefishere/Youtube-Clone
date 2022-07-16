@@ -117,12 +117,12 @@ export class Sidebar extends Component {
   }
 
   renderOpenSidebar() {
-    const { showSidebar, type } = this.props;
-    const mini = type === 'mini' && 'OpenSidebar-Container_mini';
-    const show = showSidebar && 'OpenSidebar-Container_show';
+    const { sidebarState, type } = this.props;
+    const showOverlay =
+      sidebarState > 0 && type === 'mini' && 'OpenSidebar-Container_show';
 
     return (
-      <section className={`OpenSidebar-Container ${show}`}>
+      <section className={`OpenSidebar-Container ${showOverlay}`}>
         {this.renderDefaults()}
         {this.renderInfo()}
         {this.renderSignIn()}
@@ -136,12 +136,13 @@ export class Sidebar extends Component {
   }
 
   render() {
-    const { showSidebar, type } = this.props;
-    const mini = type === 'mini' && 'OpenSidebar_mini';
-    const show = showSidebar && 'OpenSidebar_show';
+    const { sidebarState, type } = this.props;
+    const showOverlay =
+      sidebarState > 0 && type === 'mini' && 'OpenSidebar_show';
+    const close = sidebarState === 0 ? 'OpenSidebar_close' : '';
 
     return (
-      <aside className={`OpenSidebar ${mini} ${show}`}>
+      <aside className={`OpenSidebar ${close} ${showOverlay}`}>
         {this.renderOpenSidebar()}
       </aside>
     );
@@ -150,7 +151,7 @@ export class Sidebar extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    showSidebar: state.navbarReducer.showSidebar,
+    sidebarState: state.navbarReducer.sidebarState,
   };
 };
 

@@ -10,4 +10,10 @@
     .Home {
         grid-template-columns: 240px calc(100% - 240px);
     }
+    .Home_open {
+        grid-template-columns: 240px calc(100% - 240px);
+    }
+    .Home_close {
+        grid-template-columns: 72px calc(100% - 72px);
+    }
 }

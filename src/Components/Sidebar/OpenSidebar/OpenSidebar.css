@@ -1,15 +1,11 @@
 .OpenSidebar {
     display: none;
     z-index: 4;
-    width: 0px;
     height: 0px;
-}
-.Opensidebar_close {
-    width: 0px;
-    overflow: hidden;
+    width: inherit;
+    height: inherit;
 }
 .OpenSidebar_show {
-    width: 240px;
     display: block;
 }
 .OpenSidebar-Container {
@@ -18,7 +14,7 @@
     top: 55px;
     left: 0px;
     width: inherit;
-    height: 100vh;
+    height: inherit;
     overflow-y: hidden;
     padding-left: 1.7em;
     background-color: #fff;
@@ -51,9 +47,13 @@
     .OpenSidebar {
         display: block;
         width: 240px;
-    overflow: scroll;
+        overflow: scroll;
     }
     .OpenSidebar-Container {
      overflow-y: scroll;
+    }
+    .OpenSidebar_close {
+        display: none;
+        background-color: yellow;
     }
 }

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './HomeContent.css';
+import { connect } from 'react-redux';
 
 import { channelData, filters } from '../../data';
 import VideoCard from '../VideoCard/VideoCard';
@@ -93,4 +94,10 @@ export class HomeContent extends Component {
   }
 }
 
-export default HomeContent;
+const mapStateToProps = (state) => {
+  return {
+    showSidebar: state.navbarReducer.showSidebar,
+  };
+};
+
+export default connect(mapStateToProps)(HomeContent);
