@@ -29,11 +29,8 @@ export class ClosedSidebar extends Component {
   }
 
   renderClosedSidebar() {
-    const { sidebarState } = this.props;
-    const show = sidebarState > 0 && 'ClosedSidebar_show';
-
     return (
-      <section className={`ClosedSidebar-Container ${show}`}>
+      <section className={`ClosedSidebar-Container`}>
         {this.renderDefaults()}
         {this.renderInfo()}
       </section>
@@ -41,8 +38,11 @@ export class ClosedSidebar extends Component {
   }
 
   render() {
-    const { sidebarState } = this.props;
-    const show = sidebarState === 0 && 'ClosedSidebar_show';
+    const { showOverlay, showSidebar, screenWidth } = this.props;
+    const overlayMaxWidth = 1314;
+    const show =
+      ((!showOverlay && screenWidth < overlayMaxWidth) || !showSidebar) &&
+      'ClosedSidebar_show';
 
     return (
       <section className={`ClosedSidebar ${show}`}>
@@ -54,7 +54,9 @@ export class ClosedSidebar extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    sidebarState: state.navbarReducer.sidebarState,
+    showOverlay: state.navbarReducer.showOverlay,
+    showSidebar: state.navbarReducer.showSidebar,
+    screenWidth: state.navbarReducer.screenWidth,
   };
 };
 

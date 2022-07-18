@@ -10,8 +10,8 @@ import HomeContent from '../../Components/HomeContent/HomeContent';
 
 export class Home extends Component {
   render() {
-    const { sidebarState } = this.props;
-    const sidebar = sidebarState !== 0 ? 'Home_open' : 'Home_close';
+    const { showSidebar } = this.props;
+    const sidebar = showSidebar ? 'Home_open' : 'Home_close';
 
     return (
       <main className={`Home ${sidebar}`}>
@@ -26,7 +26,7 @@ export class Home extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    sidebarState: state.navbarReducer.sidebarState,
+    showSidebar: state.navbarReducer.showSidebar,
   };
 };
 

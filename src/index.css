@@ -21,7 +21,6 @@ body {
   font-weight: 400;
   font-size: 14px;
   overflow-x: 'hidden';
-  overflow-y: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

@@ -1,9 +1,9 @@
 .OpenSidebar {
     display: none;
     z-index: 4;
-    height: 0px;
     width: inherit;
-    height: inherit;
+    margin-top: 100px;
+    height: 0px;
 }
 .OpenSidebar_show {
     display: block;
@@ -11,10 +11,10 @@
 .OpenSidebar-Container {
     padding-bottom: 100px;
     position: fixed;
-    top: 55px;
+    top: 53px;
     left: 0px;
     width: inherit;
-    height: inherit;
+    height: 100vh;
     overflow-y: hidden;
     padding-left: 1.7em;
     background-color: #fff;
@@ -52,8 +52,11 @@
     .OpenSidebar-Container {
      overflow-y: scroll;
     }
+    /* .OpenSidebar-Container_show {
+     overflow-y: scroll;
+     background-color: black;
+    } */
     .OpenSidebar_close {
         display: none;
-        background-color: yellow;
     }
 }

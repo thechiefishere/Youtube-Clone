@@ -1,1 +1,2 @@
 export const TOGGLE_SIDEBAR = 'TOGGLE_SIDEBAR';
+export const SET_SCREEN_WIDTH = 'SET_SCREEN_WIDTH';
