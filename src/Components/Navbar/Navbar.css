@@ -21,33 +21,6 @@
     margin-left: 5px;
     height: 35px;
 }
-.Navbar-Middle {
-    display: flex;
-    align-items: center;
-    flex-basis: calc(100% - 340px - 25%);
-}
-.Navbar-Form input {
-    display: none;
-}
-.Navbar-Form-SearchBtn {
-    margin-right: 1.2em;
-    margin-top: 5px;
-    flex-basis: 54px;
-}
-.Navbar-Form-SearchBtn:first-of-type {
-    display: none;
-    /* flex-basis: 40px; */
-}
-.Navbar-Form-SearchBtn:last-of-type {
-    /* margin-right: 1.2em;
-    margin-top: 5px; */
-}
-.Navbar-Microphone {
-    height: 35px;
-    width: 40px;
-    border-radius: 50%;
-    padding: 10px;
-}
 
 .Navbar-Right {
     flex-basis: 170px;
@@ -65,39 +38,6 @@
 }
 
 @media (min-width: 657px) {
-    .Navbar-Middle {
-        padding-left: 0%;
-        margin-left: 1.5%;
-    }
-    .Navbar-Form {
-        border: 1px solid #000;
-        height: 35px;
-        border-radius: 3px;
-        display: flex;
-        align-items: center;
-        flex-basis: calc(100% - 40px);
-    }
-    .Navbar-Form input {
-        border: none;
-        display: inline-block;
-        width: calc(100% - 54px);
-        padding-left: 5px;
-        font-size: 1.1em;
-        border-radius: 3px;
-        height: 32px;
-    }
-    .Navbar-Form-SearchBtn {
-        border-left: 1px solid #000;
-        height: 33px;
-        padding: 6px;
-        margin-top: 0px;
-        margin-right: 0px;
-    }
-    .Navbar-Microphone {
-        background-color: var(--ash);
-        border-radius: 50%;
-        margin-left: 5px;
-    }
     .Navbar-Right {
         flex-basis: 200px;
         margin-left: auto;
@@ -107,33 +47,5 @@
 @media (min-width: 792px) {
     .Navbar {
         grid-column: span 2;
-    }
-}
-
-@media (min-width: 1180px) {
-    .Navbar-Middle {
-        padding-left: 0%;
-        flex-basis: calc(100% - 340px - 30%);
-    }
-}
-
-@media (min-width: 1500px) {
-    .Navbar-Middle {
-        padding-left: 0%;
-        flex-basis: calc(100% - 340px - 35%);
-    }
-}
-
-@media (min-width: 1580px) {
-    .Navbar-Middle {
-        padding-left: 0%;
-        flex-basis: calc(100% - 340px - 40%);
-    }
-}
-
-@media (min-width: 1650px) {
-    .Navbar-Middle {
-        padding-left: 0%;
-        flex-basis: calc(100% - 340px - 45%);
     }
 }

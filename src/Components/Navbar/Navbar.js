@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
-import './Navbar.css';
-
 import { connect } from 'react-redux';
-
 import {
   FaBars,
   FaYoutube,
@@ -11,8 +8,11 @@ import {
   FaEllipsisV,
 } from 'react-icons/fa';
 import { BsGrid3X3Gap } from 'react-icons/bs';
+
+import './Navbar.css';
 import SignInBtn from '../SignInBtn/SignInBtn';
 import { toggleSidebar } from '../../Redux/actions';
+import SearchBox from '../SearchBox/SearchBox';
 
 export class Navbar extends Component {
   renderLeftContent() {
@@ -32,25 +32,6 @@ export class Navbar extends Component {
     );
   }
 
-  renderMiddleContent() {
-    return (
-      <aside className='Navbar-Middle'>
-        {this.renderSearchBox()}
-        <FaMicrophone className='Icon Navbar-Microphone' />
-      </aside>
-    );
-  }
-
-  renderSearchBox() {
-    return (
-      <form className='Navbar-Form'>
-        <FaSearch className='Icon Navbar-Form-SearchBtn' />
-        <input type='text' placeholder='Search' className='Navbar-Input' />
-        <FaSearch className='Icon Navbar-Form-SearchBtn' />
-      </form>
-    );
-  }
-
   renderRightContent() {
     return (
       <aside className='Navbar-Right'>
@@ -66,7 +47,7 @@ export class Navbar extends Component {
       <section className='Navbar-Container'>
         <section className='Navbar-Components'>
           {this.renderLeftContent()}
-          {this.renderMiddleContent()}
+          <SearchBox />
           {this.renderRightContent()}
         </section>
       </section>

@@ -1,9 +1,17 @@
-import { SET_SCREEN_WIDTH, TOGGLE_SIDEBAR } from '../actionTypes';
+import {
+  SET_CLICKED_SEARCH_BOX,
+  SET_SCREEN_WIDTH,
+  SET_SEARCH_WORD,
+  TOGGLE_SEARCH_BOX,
+  TOGGLE_SIDEBAR,
+} from '../actionTypes';
 
 const initialState = {
   showSidebar: true,
   showOverlay: false,
   screenWidth: '',
+  searchWord: '',
+  clickedSearchBox: false,
 };
 
 export const navbarReducer = (state = initialState, action) => {
@@ -30,6 +38,15 @@ export const navbarReducer = (state = initialState, action) => {
         ...state,
         screenWidth: action.payload,
       };
+    }
+    case SET_SEARCH_WORD: {
+      return {
+        ...state,
+        searchWord: action.payload,
+      };
+    }
+    case TOGGLE_SEARCH_BOX: {
+      return { ...state, clickedSearchBox: action.payload };
     }
     default:
       return state;

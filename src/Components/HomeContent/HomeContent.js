@@ -64,14 +64,12 @@ export class HomeContent extends Component {
   }
 
   renderVideoTiles() {
+    const { allVideos } = this.props;
     return (
       <section className='HomeContent-VideosContainer'>
-        {channelData.map((obj) => {
-          const { channelVideos } = obj;
-          return channelVideos.map((video) => (
-            <VideoCard videoInfo={video} key={video.videoId} />
-          ));
-        })}
+        {allVideos.map((video) => (
+          <VideoCard key={video.videoId} videoInfo={video} />
+        ))}
       </section>
     );
   }
@@ -97,6 +95,7 @@ export class HomeContent extends Component {
 const mapStateToProps = (state) => {
   return {
     showSidebar: state.navbarReducer.showSidebar,
+    allVideos: state.videosReducer.allVideos,
   };
 };
 
