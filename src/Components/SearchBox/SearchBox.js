@@ -1,7 +1,10 @@
 import React, { Component, createRef } from 'react';
-import { FaMicrophone, FaSearch } from 'react-icons/fa';
+import { FaMicrophone } from 'react-icons/fa';
+import { AiOutlineSearch } from 'react-icons/ai';
+import { FiArrowLeft } from 'react-icons/fi';
 import { connect } from 'react-redux';
 import {
+  setClickedSearchButton,
   setFilteredVideoNames,
   setSearchWord,
   toggleSearchBox,
@@ -16,6 +19,7 @@ export class SearchBox extends Component {
   }
 
   componentDidMount() {
+    console.log('am Mounting');
     document.addEventListener('mousedown', (evt) => this.handleClickEvent(evt));
   }
 
@@ -27,11 +31,13 @@ export class SearchBox extends Component {
     }
   }
 
-  componentWillUnmount() {
-    document.removeEventListener('mousedown', (evt) =>
-      this.handleClickEvent(evt)
-    );
-  }
+  //TODO: Address this
+  //   componentWillUnmount() {
+  //     console.log('am UNMOUNTING');
+  //     document.removeEventListener('mousedown', (evt) =>
+  //       this.handleClickEvent(evt)
+  //     );
+  //   }
 
   handleSearchWord(evt) {
     const { setSearchWord, setFilteredVideoNames } = this.props;
@@ -40,13 +46,28 @@ export class SearchBox extends Component {
     setFilteredVideoNames(searchTerm);
   }
 
+  handleSearchBtn(evt) {
+    console.log('evt target', evt.target);
+    const { screenWidth, setClickedSearchButton } = this.props;
+    const lengthToDisable = 657;
+    // const button = evt.target;
+    if (screenWidth >= lengthToDisable) {
+      return;
+    }
+    setClickedSearchButton(true);
+  }
+
   renderSearchBox() {
-    const { clickedSearchBox, toggleSearchBox } = this.props;
+    const { clickedSearchBox, toggleSearchBox, filteredVideoNames } =
+      this.props;
     const showSearchBtn = clickedSearchBox ? 'Search-Form-SearchBtn_show' : '';
+    const showSearchFilter =
+      filteredVideoNames.length > 0 ? 'Search-Filter_show' : '';
+    const closeSearchFilter = !clickedSearchBox ? 'Search-Filter_close' : '';
 
     return (
       <form className='Search-Form'>
-        <FaSearch
+        <AiOutlineSearch
           className={`Icon Search-Form-SearchBtn Search-Form-SearchBtn_one ${showSearchBtn}`}
         />
         <input
@@ -56,16 +77,34 @@ export class SearchBox extends Component {
           onChange={(evt) => this.handleSearchWord(evt)}
           onClick={() => toggleSearchBox(true)}
         />
-        <FaSearch className='Icon Search-Form-SearchBtn' />
-        <div className='Search-Filter'></div>
-        {/* {console.log('filter', this.props.filteredVideoNames)} */}
+        <AiOutlineSearch
+          className='Icon Search-Form-SearchBtn'
+          onClick={(evt) => this.handleSearchBtn(evt)}
+        />
+        <ul
+          className={`Search-Filter ${showSearchFilter} ${closeSearchFilter}`}
+        >
+          {filteredVideoNames.map((videoName, index) => (
+            <li key={index}>
+              <AiOutlineSearch className='Icon' />
+              <p>{videoName}</p>
+            </li>
+          ))}
+        </ul>
       </form>
     );
   }
 
   render() {
+    const { clickedSearchButton, setClickedSearchButton } = this.props;
+    const btnClicked = clickedSearchButton ? 'Search_btnClicked' : '';
+
     return (
-      <section ref={this.searchRef} className='Search'>
+      <section ref={this.searchRef} className={`Search ${btnClicked}`}>
+        <FiArrowLeft
+          className='Icon Search-ArrowLeft'
+          onClick={() => setClickedSearchButton(false)}
+        />
         {this.renderSearchBox()}
         <FaMicrophone className='Icon Search-Microphone' />
       </section>
@@ -77,6 +116,8 @@ const mapStateToProps = (state) => {
   return {
     filteredVideoNames: state.videosReducer.filteredVideoNames,
     clickedSearchBox: state.navbarReducer.clickedSearchBox,
+    screenWidth: state.navbarReducer.screenWidth,
+    clickedSearchButton: state.navbarReducer.clickedSearchButton,
   };
 };
 
@@ -85,6 +126,8 @@ const mapDispatchToProps = (dispatch) => {
     setSearchWord: (word) => dispatch(setSearchWord(word)),
     setFilteredVideoNames: (filter) => dispatch(setFilteredVideoNames(filter)),
     toggleSearchBox: (isClicked) => dispatch(toggleSearchBox(isClicked)),
+    setClickedSearchButton: (isClicked) =>
+      dispatch(setClickedSearchButton(isClicked)),
   };
 };
 

@@ -1,5 +1,6 @@
 import {
   SET_CLICKED_SEARCH_BOX,
+  SET_CLICKED_SEARCH_BUTTON,
   SET_SCREEN_WIDTH,
   SET_SEARCH_WORD,
   TOGGLE_SEARCH_BOX,
@@ -12,6 +13,7 @@ const initialState = {
   screenWidth: '',
   searchWord: '',
   clickedSearchBox: false,
+  clickedSearchButton: false,
 };
 
 export const navbarReducer = (state = initialState, action) => {
@@ -47,6 +49,9 @@ export const navbarReducer = (state = initialState, action) => {
     }
     case TOGGLE_SEARCH_BOX: {
       return { ...state, clickedSearchBox: action.payload };
+    }
+    case SET_CLICKED_SEARCH_BUTTON: {
+      return { ...state, clickedSearchButton: action.payload };
     }
     default:
       return state;

@@ -1,5 +1,6 @@
 import { getFilteredVideoNames } from '../Utils/functions';
 import {
+  SET_CLICKED_SEARCH_BUTTON,
   SET_FILTERED_VIDEOS_NAMES,
   SET_SCREEN_WIDTH,
   SET_SEARCH_WORD,
@@ -48,6 +49,13 @@ export const setFilteredVideoNames = (filter) => {
 export const toggleSearchBox = (isClicked) => {
   return {
     type: TOGGLE_SEARCH_BOX,
+    payload: isClicked,
+  };
+};
+
+export const setClickedSearchButton = (isClicked) => {
+  return {
+    type: SET_CLICKED_SEARCH_BUTTON,
     payload: isClicked,
   };
 };

@@ -2,17 +2,28 @@
     display: flex;
     align-items: center;
     flex-basis: calc(100% - 340px - 25%);
+    margin-right: 12px;
 }
-.Search-Form input {
+.Search-ArrowLeft {
+    display: none;
+}
+.Search-Form {
+    position: relative;
+}
+.Search-Input {
     display: none;
 }
 .Search-Form input:focus {
     outline: none;
 }
+.Search-Input_show {
+    display: block;
+}
 .Search-Form-SearchBtn {
-    margin-right: 1.2em;
+    margin-right: .6em;
     margin-top: 5px;
     flex-basis: 54px;
+    font-size: 1.7em;
 }
 .Search-Form-SearchBtn_one {
     display: none;
@@ -22,16 +33,89 @@
     display: block;
 }
 .Search-Filter {
-    background-color: red;
-    height: 3vh;
+    background-color: #fff;
+    padding: 10px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    position: absolute;
+    top: 35px;
+    left: 0px;
+    z-index: 2;
+    font-weight: 500;
+    line-height: 32px;
+    border: 1px solid #ccc;
+    width: 100%;
     display: none;
-    /* width: 30px; */
+}
+.Search-Filter_show {
+    display: block;
+}
+.Search-Filter_close {
+    display: none;
+}
+.Search-Filter li {
+    margin: 10px 0px;
+    display: flex;
+}
+.Search-Filter li .Icon {
+    flex-basis: 20px;
+    height: 20px;
+    margin-right: 10px;
+    margin-top: 3px;
+}
+.Search-Filter li p {
+    width: calc(100% - 20px);
+    font-size: 16px;
 }
 .Search-Microphone {
     height: 35px;
     width: 40px;
     border-radius: 50%;
-    padding: 10px;
+    padding: 9px;
+}
+
+.Search_btnClicked {
+    flex-basis: 100%;
+}
+.Search_btnClicked .Search-ArrowLeft {
+    display: block;
+    margin-right: 5px;
+    height: 35px;
+    width: 40px;
+    padding: 6px;
+}
+.Search_btnClicked .Search-Form {
+    border: 1px solid #000;
+    height: 35px;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    flex-basis: calc(100% - 40px);
+}
+.Search_btnClicked input {
+    border: none;
+    display: inline-block;
+    width: calc(100% - 54px);
+    padding-left: 5px;
+    font-size: 1.1em;
+    border-radius: 3px;
+    height: 32px;
+}
+.Search_btnClicked .Search-Form-SearchBtn {
+    border-left: 1px solid #000;
+    height: 33px;
+    padding: 6px;
+    margin-top: 0px;
+    margin-right: 0px;
+}
+.Search_btnClicked .Search-Form-SearchBtn:first-of-type {
+    display: block;
+    flex-basis: 40px;
+}
+.Search_btnClicked .Search-Microphone {
+    background-color: var(--ash);
+    border-radius: 50%;
+    margin-left: 5px;
 }
 
 @media (min-width: 657px) {

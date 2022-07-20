@@ -1,12 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import {
-  FaBars,
-  FaYoutube,
-  FaSearch,
-  FaMicrophone,
-  FaEllipsisV,
-} from 'react-icons/fa';
+import { FaBars, FaYoutube, FaEllipsisV } from 'react-icons/fa';
 import { BsGrid3X3Gap } from 'react-icons/bs';
 
 import './Navbar.css';
@@ -16,10 +10,11 @@ import SearchBox from '../SearchBox/SearchBox';
 
 export class Navbar extends Component {
   renderLeftContent() {
-    const { toggleSidebar } = this.props;
+    const { toggleSidebar, clickedSearchButton } = this.props;
+    const leftOnSearchClick = clickedSearchButton ? 'Navbar-Left_search' : '';
 
     return (
-      <aside className='Navbar-Left'>
+      <aside className={`Navbar-Left ${leftOnSearchClick}`}>
         <FaBars className='Icon Icon_bars' onClick={() => toggleSidebar()} />
         <div className='Youtube-LogoContainer'>
           <FaYoutube className='Icon Icon_logo' />
@@ -33,8 +28,10 @@ export class Navbar extends Component {
   }
 
   renderRightContent() {
+    const { clickedSearchButton } = this.props;
+    const rightOnSearchClick = clickedSearchButton ? 'Navbar-Right_search' : '';
     return (
-      <aside className='Navbar-Right'>
+      <aside className={`Navbar-Right ${rightOnSearchClick}`}>
         <BsGrid3X3Gap className='Icon Navbar-Grid' />
         <FaEllipsisV className='Icon Navbar-Dots' />
         <SignInBtn />
@@ -59,10 +56,16 @@ export class Navbar extends Component {
   }
 }
 
+const mapStateToProps = (state) => {
+  return {
+    clickedSearchButton: state.navbarReducer.clickedSearchButton,
+  };
+};
+
 const mapDispatchToProps = (dispatch) => {
   return {
     toggleSidebar: () => dispatch(toggleSidebar()),
   };
 };
 
-export default connect(null, mapDispatchToProps)(Navbar);
+export default connect(mapStateToProps, mapDispatchToProps)(Navbar);
