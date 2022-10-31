@@ -33,20 +33,22 @@
     font-size: 1.7em;
 }
 .Icon_homeContentFilter {
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 200);
     padding: 10px;
     position: absolute;
-    top: 0px;
+    top: 7px;
     width: 80px;
-    height: 40px;
+    height: 36px;
     border-radius: 35%;
+
+    z-index: 3;
 }
 .Icon_homeContentFilter:first-of-type {
     left: 0;
     display: none;
 }
 .Icon_homeContentFilter:last-of-type {
-    right: 0;
+    right: 7%;
 }
 .Youtube-LogoContainer {
     display: flex;

@@ -1,24 +1,44 @@
 .HomeContent {
     z-index: 1;
+
+    background-color: red;
 }
-.HomeContent-FilterContainer {
-    background-color: #fff;
-    width: 100%;
-    position: relative;
-    margin-top: 10px;
-    margin-bottom: 10px;
+.HomeContent-FilterSection {
     position: fixed;
     z-index: 2;
+    background-color: yellow;
+    width: 100%;
+    padding: 5px;
+
+    overflow-x: scroll;
+}
+.HomeContent-FilterContainer {
+    /* background-color: #fff; */
+    background-color: red;
+    position: relative;
+    height: 50px;
+
+    width: inherit;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+    /* top: 500px; */
+    /* overflow-x: hidden; */
 }
 .HomeContent-FilterWrapper {
-    background-color: #fff;
+    background-color: blue;
+    position: absolute;
+    top: 5px;
+    left: 17px;
+    
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-left: 17px;
+    /* margin-left: 17px; */
 }
 .HomeContent-Filter {
     background-color: #eee;
+
     padding: 5px 15px;
     margin: 5px;
     border-radius: 20px;

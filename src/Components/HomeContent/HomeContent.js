@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, createRef } from 'react';
 import './HomeContent.css';
 import { connect } from 'react-redux';
 
@@ -8,6 +8,13 @@ import VideoCard from '../VideoCard/VideoCard';
 import { FaAngleLeft, FaAngleRight, FaYoutube, FaTimes } from 'react-icons/fa';
 
 export class HomeContent extends Component {
+  constructor(prop) {
+    super(prop);
+
+    this.filterWrapperRef = createRef();
+    this.filterLeftClickRef = createRef();
+  }
+
   componentDidMount() {
     window.addEventListener('scroll', this.handleScroll);
   }
@@ -26,19 +33,37 @@ export class HomeContent extends Component {
     document.documentElement.style.setProperty('--beforeHeight', difference);
   }
 
+  handleFilterRightScroll() {
+    const wrapper = this.filterWrapperRef.current;
+    const leftScrollIcon = document.querySelector('#LeftAngle');
+
+    const wrapperLeft = wrapper.getBoundingClientRect().left;
+    wrapper.style.left = `${wrapperLeft - 200}px`;
+
+    leftScrollIcon.style.display = 'block';
+  }
+
+  handleFilterLeftScroll() {}
+
   renderFilters() {
     return (
       <section className='HomeContent-FilterSection'>
         <div className='HomeContent-FilterContainer'>
-          <FaAngleLeft className='Icon Icon_homeContentFilter' />
-          <div className='HomeContent-FilterWrapper'>
+          <FaAngleLeft className='Icon Icon_homeContentFilter' id='LeftAngle' />
+          <div
+            className='HomeContent-FilterWrapper'
+            ref={this.filterWrapperRef}
+          >
             {filters.map((filter, index) => (
               <p key={index} className='HomeContent-Filter'>
                 {filter}
               </p>
             ))}
           </div>
-          <FaAngleRight className='Icon Icon_homeContentFilter' />
+          <FaAngleRight
+            className='Icon Icon_homeContentFilter'
+            onClick={() => this.handleFilterRightScroll()}
+          />
         </div>
       </section>
     );
