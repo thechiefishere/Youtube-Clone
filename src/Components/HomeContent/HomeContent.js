@@ -35,7 +35,7 @@ export class HomeContent extends Component {
 
   handleFilterRightScroll() {
     const wrapper = this.filterWrapperRef.current;
-    const leftScrollIcon = document.querySelector('#LeftAngle');
+    const leftScrollIcon = document.querySelector('#filterLeftAngle');
 
     const wrapperLeft = wrapper.getBoundingClientRect().left;
     wrapper.style.left = `${wrapperLeft - 200}px`;
@@ -43,13 +43,22 @@ export class HomeContent extends Component {
     leftScrollIcon.style.display = 'block';
   }
 
-  handleFilterLeftScroll() {}
+  handleFilterLeftScroll() {
+    const wrapper = this.filterWrapperRef.current;
+
+    const wrapperLeft = wrapper.getBoundingClientRect().left;
+    wrapper.style.left = `${wrapperLeft + 200}px`;
+  }
 
   renderFilters() {
     return (
       <section className='HomeContent-FilterSection'>
         <div className='HomeContent-FilterContainer'>
-          <FaAngleLeft className='Icon Icon_homeContentFilter' id='LeftAngle' />
+          <FaAngleLeft
+            className='Icon Icon_homeContentFilter'
+            id='filterLeftAngle'
+            onClick={() => this.handleFilterLeftScroll()}
+          />
           <div
             className='HomeContent-FilterWrapper'
             ref={this.filterWrapperRef}
