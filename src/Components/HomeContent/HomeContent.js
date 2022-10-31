@@ -17,10 +17,19 @@ export class HomeContent extends Component {
 
   componentDidMount() {
     window.addEventListener('scroll', this.handleScroll);
+    window.addEventListener('resize', this.handleResize);
   }
 
   componentWillUnmount() {
     window.removeEventListener('scroll', this.handleScroll);
+  }
+
+  componentDidUpdate() {
+    console.log('updating');
+  }
+
+  handleResize() {
+    console.log('a resize');
   }
 
   handleScroll() {

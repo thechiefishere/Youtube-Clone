@@ -36,7 +36,7 @@
     background-color: rgba(255, 255, 255, 200);
     padding: 10px;
     position: absolute;
-    top: 7px;
+    top: 1px;
     width: 80px;
     height: 36px;
     border-radius: 35%;
@@ -48,7 +48,7 @@
     display: none;
 }
 .Icon_homeContentFilter:last-of-type {
-    right: 7%;
+    right: -10px;
 }
 .Youtube-LogoContainer {
     display: flex;
