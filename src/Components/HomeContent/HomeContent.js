@@ -14,6 +14,7 @@ export class HomeContent extends Component {
     this.filterWrapperRef = createRef();
     this.filterContainerRef = createRef();
     this.filterLeftClickRef = createRef();
+    this.advertRef = createRef();
   }
 
   componentDidMount() {
@@ -111,6 +112,11 @@ export class HomeContent extends Component {
     this.checkWrapperEnd(rightScrollIcon);
   }
 
+  closeAdvert() {
+    const advertRef = this.advertRef.current;
+    advertRef.style.display = 'none';
+  }
+
   renderFilters() {
     return (
       <section className='HomeContent-FilterSection'>
@@ -145,7 +151,7 @@ export class HomeContent extends Component {
 
   renderAdvert() {
     return (
-      <section className='HomeContent-Advert'>
+      <section className='HomeContent-Advert' ref={this.advertRef}>
         <div className='HomeContent-AdvertDetail'>
           <div className='Youtube-LogoContainer Youtube-LogoContainer_advert'>
             <FaYoutube className='Icon Icon_logo' />
@@ -157,7 +163,10 @@ export class HomeContent extends Component {
           </p>
           <button className='Button Button_thick'>Get it now</button>
         </div>
-        <FaTimes className='Icon HomeContent-AdvertCancel' />
+        <FaTimes
+          className='Icon HomeContent-AdvertCancel'
+          onClick={() => this.closeAdvert()}
+        />
       </section>
     );
   }
