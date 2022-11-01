@@ -25,7 +25,8 @@
 
     width: inherit;
     margin-top: 5px;
-    margin-bottom: 5px;    
+    margin-bottom: 5px;   
+    overflow-x: hidden;
 }
 .HomeContent-FilterWrapper {
     position: absolute;
@@ -47,6 +48,9 @@
 .HomeContent-Filter:first-of-type {
     background-color: #000;
     color: #fff;
+}
+.HomeContent-Filter_hide {
+    display: none;
 }
 .HomeContent-Container {
     position: relative;

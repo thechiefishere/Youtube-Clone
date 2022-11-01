@@ -17,19 +17,10 @@ export class HomeContent extends Component {
 
   componentDidMount() {
     window.addEventListener('scroll', this.handleScroll);
-    window.addEventListener('resize', this.handleResize);
   }
 
   componentWillUnmount() {
     window.removeEventListener('scroll', this.handleScroll);
-  }
-
-  componentDidUpdate() {
-    console.log('updating');
-  }
-
-  handleResize() {
-    console.log('a resize');
   }
 
   handleScroll() {
@@ -50,13 +41,36 @@ export class HomeContent extends Component {
     wrapper.style.left = `${wrapperLeft - 200}px`;
 
     leftScrollIcon.style.display = 'block';
+    this.hideFilter(leftScrollIcon);
   }
 
   handleFilterLeftScroll() {
     const wrapper = this.filterWrapperRef.current;
+    const leftScrollIcon = document.querySelector('#filterLeftAngle');
 
     const wrapperLeft = wrapper.getBoundingClientRect().left;
     wrapper.style.left = `${wrapperLeft + 200}px`;
+    this.hideFilter(leftScrollIcon);
+  }
+
+  hideFilter(scrollIcon) {
+    const filters = document.querySelectorAll('.HomeContent-Filter');
+    const iconLeftPosition = scrollIcon.getBoundingClientRect().left;
+    const iconRightPosition = scrollIcon.getBoundingClientRect().right;
+    const median = `${(iconLeftPosition + iconRightPosition) / 2}`;
+
+    filters.forEach((filter) => {
+      const filterRightPosition = filter.getBoundingClientRect().right;
+      const filterLeftPosition = filter.getBoundingClientRect().left;
+      if (
+        filterRightPosition <= median ||
+        filterLeftPosition <= iconLeftPosition
+      ) {
+        filter.style.opacity = 0;
+      } else {
+        filter.style.opacity = 1;
+      }
+    });
   }
 
   renderFilters() {
