@@ -19,7 +19,6 @@ export class SearchBox extends Component {
   }
 
   componentDidMount() {
-    console.log('am Mounting');
     document.addEventListener('mousedown', (evt) => this.handleClickEvent(evt));
   }
 
