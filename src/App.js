@@ -1,9 +1,12 @@
 import { Component } from 'react';
 import './App.css';
+import Navbar from './Components/Navbar/Navbar';
 import Home from './Pages/Home/Home';
+import VideoPage from './Pages/VideoPage/VideoPage';
 import { connect } from 'react-redux';
 import SidebarOverlay from './Components/Sidebar/SidebarOverlay/SidebarOverlay';
 import { setScreenWidth } from './Redux/actions';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 class App extends Component {
   componentDidMount() {
@@ -24,10 +27,16 @@ class App extends Component {
 
   render() {
     return (
-      <main className='App'>
-        <Home />
-        <SidebarOverlay />
-      </main>
+      <Router>
+        <main className='App'>
+          <Navbar />
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/watch' element={<VideoPage />} />
+          </Routes>
+          <SidebarOverlay />
+        </main>
+      </Router>
     );
   }
 }

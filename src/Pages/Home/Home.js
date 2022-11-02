@@ -15,7 +15,7 @@ export class Home extends Component {
 
     return (
       <main className={`Home ${sidebar}`}>
-        <Navbar />
+        {/* <Navbar /> */}
         <ClosedSidebar />
         <OpenSidebar />
         <HomeContent />
