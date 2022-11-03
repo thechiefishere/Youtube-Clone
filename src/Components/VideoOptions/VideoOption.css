@@ -1,0 +1,32 @@
+.VideoOptions {
+    display: flex;
+    margin: 5px 0px;
+    overflow-x: hidden;
+}
+.Option {
+    display: flex;
+    align-items: center;
+
+    font-size: 1em;
+    padding: 5px 10px;
+    background-color: #eee;
+    border-radius: 30%;
+    /* display: inline-block; */
+    margin-right: 10px ;
+}
+.Option p {
+    margin-left: 10px;
+}
+.Option-Keep {
+    display: none;
+}
+.Option-Show {
+    display: flex;
+}
+.Option-More {
+    font-size: 2em;
+    background-color: #eee;
+    padding: 0px 5px;
+    border-radius: 50%;
+
+}

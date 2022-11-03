@@ -1,4 +1,4 @@
-import { HiHome } from 'react-icons/hi';
+import { HiDownload, HiHome } from 'react-icons/hi';
 import {
   MdOutlineExplore,
   MdVideoLibrary,
@@ -17,6 +17,12 @@ import { FaMusic, FaRegNewspaper } from 'react-icons/fa';
 import { GiDominoMask } from 'react-icons/gi';
 import { SiYoutubegaming } from 'react-icons/si';
 import { FiPlusCircle, FiSettings, FiHelpCircle } from 'react-icons/fi';
+
+import { BiLike, BiDislike } from 'react-icons/bi';
+import { RiShareForwardLine } from 'react-icons/ri';
+import { TbPlaylistAdd } from 'react-icons/tb';
+import { SlFlag } from 'react-icons/sl';
+import { CgTranscript } from 'react-icons/cg';
 
 export const sidebarData = {
   defaults: [
@@ -204,6 +210,20 @@ export const channelData = [
         ],
       },
     ],
+    channelPlaylist: [
+      {
+        playlistName: 'Starship',
+        playlistVideosID: [1],
+      },
+      {
+        playlistName: 'Interview',
+        playlistVideosID: [2],
+      },
+      {
+        playlistName: 'Kerbal Space Program',
+        playlistVideosID: [1, 2],
+      },
+    ],
   },
   {
     channelId: 2,
@@ -321,6 +341,20 @@ export const channelData = [
             ],
           },
         ],
+      },
+    ],
+    channelPlaylist: [
+      {
+        playlistName: 'Live Coding',
+        playlistVideosID: [3],
+      },
+      {
+        playlistName: 'TypeScript',
+        playlistVideosID: [4],
+      },
+      {
+        playlistName: 'Clean Code',
+        playlistVideosID: [3, 4],
       },
     ],
   },
@@ -469,6 +503,20 @@ export const channelData = [
         ],
       },
     ],
+    channelPlaylist: [
+      {
+        playlistName: 'JRE Toons',
+        playlistVideosID: [5],
+      },
+      {
+        playlistName: 'Favourite Clips 2',
+        playlistVideosID: [6],
+      },
+      {
+        playlistName: 'JRE Clips',
+        playlistVideosID: [5, 6],
+      },
+    ],
   },
   {
     channelId: 4,
@@ -576,6 +624,20 @@ export const channelData = [
             replies: [],
           },
         ],
+      },
+    ],
+    channelPlaylist: [
+      {
+        playlistName: 'JavaScript Under The Hood',
+        playlistVideosID: [7],
+      },
+      {
+        playlistName: 'Guest Speakers',
+        playlistVideosID: [8],
+      },
+      {
+        playlistName: 'React Projects',
+        playlistVideosID: [7, 8],
       },
     ],
   },
@@ -707,6 +769,20 @@ export const channelData = [
             ],
           },
         ],
+      },
+    ],
+    channelPlaylist: [
+      {
+        playlistName: 'Reusability',
+        playlistVideosID: [9],
+      },
+      {
+        playlistName: 'Human Spaceflight',
+        playlistVideosID: [10],
+      },
+      {
+        playlistName: 'Mission Webcasts',
+        playlistVideosID: [9, 10],
       },
     ],
   },
@@ -860,6 +936,20 @@ export const channelData = [
         ],
       },
     ],
+    channelPlaylist: [
+      {
+        playlistName: 'Inertia',
+        playlistVideosID: [11],
+      },
+      {
+        playlistName: 'Radiation',
+        playlistVideosID: [12],
+      },
+      {
+        playlistName: 'Favourites',
+        playlistVideosID: [11, 12],
+      },
+    ],
   },
 ];
 
@@ -885,4 +975,35 @@ export const filters = [
   'Elon Musk',
   'Tesla',
   'Jordan Peterson',
+];
+
+export const videoOptions = [
+  {
+    name: 'Likes',
+    logo: <BiLike className='Icon Icon_videoOption' />,
+  },
+  {
+    name: 'Dislikes',
+    logo: <BiDislike className='Icon Icon_videoOption' />,
+  },
+  {
+    name: 'Share',
+    logo: <RiShareForwardLine className='Icon Icon_videoOption' />,
+  },
+  {
+    name: 'Download',
+    logo: <HiDownload className='Icon Icon_videoOption' />,
+  },
+  {
+    name: 'Save',
+    logo: <TbPlaylistAdd className='Icon Icon_videoOption' />,
+  },
+  {
+    name: 'Report',
+    logo: <SlFlag className='Icon Icon_videoOption' />,
+  },
+  {
+    name: 'Show transcript',
+    logo: <CgTranscript className='Icon Icon_videoOption' />,
+  },
 ];

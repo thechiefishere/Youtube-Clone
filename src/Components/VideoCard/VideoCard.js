@@ -15,10 +15,11 @@ export class VideoCard extends Component {
       views,
       time,
       isVerified,
+      videoId,
     } = this.props.videoInfo;
 
     return (
-      <Link to={`/watch?v=${videoName}`}>
+      <Link to={`/watch?v=${videoId}`}>
         <div>
           <div className='VideoCard-Video'>
             <img src={thumbnail} alt={videoName} />

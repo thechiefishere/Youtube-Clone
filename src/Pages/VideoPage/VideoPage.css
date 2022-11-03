@@ -1,0 +1,48 @@
+.VideoPage {
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 40px;
+}
+
+.VideoPane {
+    width: 100%;
+    height: 40vh;
+}
+video {
+    width: inherit;
+    height: inherit;
+}
+
+.ChannelData {
+    margin-top: 10px;
+}
+.ChannelData-PlaylistContainer {
+    display: flex;
+}
+.ChannelData-Playlist {
+    margin-right: 20px;
+    color: blue;
+}
+.ChannelData h2 {
+    font-size: 1.5em;
+    margin: 2px 0px 5px 0px;
+}
+.ChannelData-ChannelInfo {
+    margin: 10px 0px;
+    display: flex;
+    align-items: center;
+}
+.ChannelData-ChannelInfo img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-right: 5px;
+}
+.ChannelData-Info-Subscribe {
+    font-size: 1.2em;
+    padding: 10px 15px;
+    border-radius: 20%;
+    background-color: red;
+    color: #fff;
+    margin-left: 20px;
+}
