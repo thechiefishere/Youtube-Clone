@@ -1,34 +1,91 @@
-import React, { Component } from 'react';
+import React, { Component, createRef } from 'react';
 import './VideoOption.css';
 import { connect } from 'react-redux';
 import { videoOptions } from '../../data';
-import { keepOrShow } from '../../Utils/functions';
+import { separateVideoOptions } from '../../Utils/functions';
 
 export class VideoOption extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {};
+    this.hiddenOptionsRef = createRef();
+    this.optionsMoreRef = createRef();
+    this.state = {
+      showHiddenOptions: false,
+    };
+  }
+
+  componentDidMount() {
+    window.addEventListener('click', (evt) => this.checkPageClick(evt));
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('click', (evt) => this.checkPageClick(evt));
+  }
+
+  checkPageClick(evt) {
+    const { showHiddenOptions } = this.state;
+    const optionsMore = this.optionsMoreRef.current;
+    if (!optionsMore.contains(evt.target)) {
+      if (showHiddenOptions) this.setState({ showHiddenOptions: false });
+    }
+  }
+
+  openHiddenOptions() {
+    const { showHiddenOptions } = this.state;
+
+    const hiddenOption = this.hiddenOptionsRef.current;
+    const optionsMore = this.optionsMoreRef.current;
+    const optionsMoreLeftPosition = optionsMore.getBoundingClientRect().left;
+
+    this.setState({ showHiddenOptions: !showHiddenOptions });
+    hiddenOption.style.left = `${optionsMoreLeftPosition - 150}px`;
+  }
+
+  renderHiddenOptions(videoOptions) {
+    const { screenWidth } = this.props;
+    const { showHiddenOptions } = this.state;
+    const { optionsToHide } = separateVideoOptions(videoOptions, screenWidth);
+    const show = showHiddenOptions
+      ? 'HiddenOptions-Show'
+      : 'HiddenOptions-Hide';
+
+    return (
+      <section className={`HiddenOptions ${show}`} ref={this.hiddenOptionsRef}>
+        {optionsToHide.map((option, index) => (
+          <div key={index} className='Option Option_hidden'>
+            {option.logo}
+            <p>{option.name}</p>
+          </div>
+        ))}
+      </section>
+    );
   }
 
   render() {
     const { likesCount, dislikesCount, screenWidth } = this.props;
     videoOptions[0].name = likesCount;
     videoOptions[1].name = dislikesCount;
+    const { optionsToShow } = separateVideoOptions(videoOptions, screenWidth);
 
     return (
       <section className='VideoOptions'>
-        {videoOptions.map((option, index) => {
-          const showState = keepOrShow(index, screenWidth);
-          const show = showState ? 'Option-Show' : 'Option-Keep';
-          return (
-            <div key={index} className={`Option ${show}`}>
+        <section className='OptionsWrapper'>
+          {optionsToShow.map((option, index) => (
+            <div key={index} className={`Option`}>
               {option.logo}
               <p>{option.name}</p>
             </div>
-          );
-        })}
-        <h1 className='Option-More'>...</h1>
+          ))}
+          <h1
+            className='Option-More'
+            onClick={() => this.openHiddenOptions()}
+            ref={this.optionsMoreRef}
+          >
+            ...
+          </h1>
+        </section>
+        {this.renderHiddenOptions(videoOptions)}
       </section>
     );
   }

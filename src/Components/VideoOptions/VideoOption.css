@@ -1,21 +1,25 @@
 .VideoOptions {
-    display: flex;
     margin: 5px 0px;
+    position: relative;
+}
+
+.OptionsWrapper {
+    display: flex;
     overflow-x: hidden;
 }
 .Option {
     display: flex;
     align-items: center;
 
-    font-size: 1em;
+    font-size: 1.1em;
     padding: 5px 10px;
     background-color: #eee;
     border-radius: 30%;
-    /* display: inline-block; */
     margin-right: 10px ;
+    cursor: pointer;
 }
 .Option p {
-    margin-left: 10px;
+    margin-left: 5px;
 }
 .Option-Keep {
     display: none;
@@ -28,5 +32,30 @@
     background-color: #eee;
     padding: 0px 5px;
     border-radius: 50%;
+    cursor: pointer;
+}
+.Option_hidden {
+    background-color: #fff;
+    border-radius: 0px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
 
+.HiddenOptions {
+    position: absolute;
+    top: 30px;
+    left: 280px;
+    background-color: #fff;
+    padding: 10px 5px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+
+    /* width: 290px; */
+    /* height: 20vh; */
+}
+.HiddenOptions-Hide {
+    display: none;
+}
+.HiddenOptions-Show {
+    display: block;
 }

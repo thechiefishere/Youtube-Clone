@@ -100,12 +100,27 @@ export const keepOrShow = (index, screenWidth) => {
   else if (screenWidth < 560 && index > 4) toShow = false;
   if (screenWidth > 560 && index < 5) toShow = true;
   else if (screenWidth > 560 && index > 5) toShow = false;
-  if (screenWidth >= 665 && index < 3) toShow = true;
-  else if (screenWidth >= 665 && index > 3) toShow = false;
+  if (screenWidth >= 660 && index < 2) toShow = true;
+  else if (screenWidth >= 660 && index > 2) toShow = false;
   if (screenWidth >= 1305 && index < 4) toShow = true;
   else if (screenWidth >= 1305 && index > 4) toShow = false;
   if (screenWidth >= 1495 && index < 5) toShow = true;
   else if (screenWidth >= 1495 && index < 5) toShow = false;
 
   return toShow;
+};
+
+export const separateVideoOptions = (videoOptions, screenWidth) => {
+  const optionsToShow = [];
+  const optionsToHide = [];
+  videoOptions.forEach((option, index) => {
+    const toShow = keepOrShow(index, screenWidth);
+    if (toShow) optionsToShow.push(option);
+    else optionsToHide.push(option);
+  });
+
+  return {
+    optionsToShow,
+    optionsToHide,
+  };
 };
