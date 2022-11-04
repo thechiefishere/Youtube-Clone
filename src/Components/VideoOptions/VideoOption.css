@@ -44,14 +44,12 @@
 .HiddenOptions {
     position: absolute;
     top: 30px;
-    left: 280px;
+    right: 0px;
     background-color: #fff;
+    /* background-color: red; */
     padding: 10px 5px;
     border: 1px solid #ddd;
     border-radius: 10px;
-
-    /* width: 290px; */
-    /* height: 20vh; */
 }
 .HiddenOptions-Hide {
     display: none;

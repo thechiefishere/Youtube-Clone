@@ -26,20 +26,10 @@ export class VideoOption extends Component {
   checkPageClick(evt) {
     const { showHiddenOptions } = this.state;
     const optionsMore = this.optionsMoreRef.current;
+
     if (!optionsMore.contains(evt.target)) {
       if (showHiddenOptions) this.setState({ showHiddenOptions: false });
     }
-  }
-
-  openHiddenOptions() {
-    const { showHiddenOptions } = this.state;
-
-    const hiddenOption = this.hiddenOptionsRef.current;
-    const optionsMore = this.optionsMoreRef.current;
-    const optionsMoreLeftPosition = optionsMore.getBoundingClientRect().left;
-
-    this.setState({ showHiddenOptions: !showHiddenOptions });
-    hiddenOption.style.left = `${optionsMoreLeftPosition - 150}px`;
   }
 
   renderHiddenOptions(videoOptions) {
@@ -63,6 +53,7 @@ export class VideoOption extends Component {
   }
 
   render() {
+    const { showHiddenOptions } = this.state;
     const { likesCount, dislikesCount, screenWidth } = this.props;
     videoOptions[0].name = likesCount;
     videoOptions[1].name = dislikesCount;
@@ -79,7 +70,9 @@ export class VideoOption extends Component {
           ))}
           <h1
             className='Option-More'
-            onClick={() => this.openHiddenOptions()}
+            onClick={() =>
+              this.setState({ showHiddenOptions: !showHiddenOptions })
+            }
             ref={this.optionsMoreRef}
           >
             ...

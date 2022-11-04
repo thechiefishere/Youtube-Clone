@@ -2,6 +2,7 @@
     width: 90%;
     margin: 0 auto;
     padding-top: 40px;
+    /* overflow-x: hidden; */
 }
 
 .VideoPane {
@@ -45,4 +46,11 @@ video {
     background-color: red;
     color: #fff;
     margin-left: 20px;
+}
+@media (min-width: 660px) {
+    .ChannelData-Info {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
 }
