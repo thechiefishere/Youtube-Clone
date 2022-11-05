@@ -9,6 +9,28 @@
 .VideoCard-Video img {
     width: 100%;
 }
+.VideoCard-Description {
+    display: flex;
+    margin-top: 10px;
+}
+.VideoCard-Description img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+.VideoCard-ChannelNameContainer {
+    display: flex;
+    margin-top: 5px;
+}
+.VideoCard-ChannelNameContainer p:last-of-type{
+    border-radius: 50%;
+    background-color: #888;
+    color: #fff;
+    margin-left: 5px;
+    font-size: .5em;
+    padding: 2px 5px 0px 5px;
+}
 .VideoCard-Video p {
     position: absolute;
     bottom: 10px;

@@ -3,21 +3,21 @@ import './VideoCard.css';
 
 import { FaCheck } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
-import { addPrefixToNumber, getTimeframe } from '../../Utils/functions';
+import {
+  addPrefixToNumber,
+  getTimeframe,
+  getVideoChannelFromVideoID,
+} from '../../Utils/functions';
+import { channelData } from '../../data';
 
 export class VideoCard extends Component {
   renderCard() {
-    const {
-      thumbnail,
-      videoLength,
-      channelPicture,
-      videoName,
-      channelName,
-      views,
-      timePosted,
-      isVerified,
-      videoId,
-    } = this.props.videoInfo;
+    const { thumbnail, videoLength, videoName, views, timePosted, videoId } =
+      this.props.videoInfo;
+    const { image, channelName, isVerified } = getVideoChannelFromVideoID(
+      channelData,
+      videoId
+    );
     const viewPrefix = addPrefixToNumber(views);
     const timeFrame = getTimeframe(timePosted);
 
@@ -29,12 +29,12 @@ export class VideoCard extends Component {
             <p>{videoLength}</p>
           </div>
           <div className='VideoCard-Description'>
-            <img src={channelPicture} alt={channelName} />
+            <img src={image} alt={channelName} />
             <div>
               <p>{videoName}</p>
-              <div>
+              <div className='VideoCard-ChannelNameContainer'>
                 <p>{channelName}</p>
-                {isVerified && <FaCheck />}
+                <p>{isVerified && <FaCheck />}</p>
               </div>
               <div className='VideoCard-ViewsContainer'>
                 <p>{viewPrefix} views</p>

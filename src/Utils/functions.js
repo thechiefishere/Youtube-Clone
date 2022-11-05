@@ -126,9 +126,7 @@ export const separateVideoOptions = (videoOptions, screenWidth) => {
 };
 
 export const getTimeframe = (date) => {
-  console.log('date', date);
   const currentDate = new Date();
-  console.log('currentDate', currentDate);
   const [month, day, year, hour, minute, seconds] = [
     date.getMonth(),
     date.getDate(),
@@ -153,8 +151,6 @@ export const getTimeframe = (date) => {
     currentDate.getSeconds(),
   ];
 
-  console.log('year', year);
-  console.log('current year', current_year);
   if (current_year - year === 1) return `${current_year - year} year`;
   if (current_year - year > 1) return `${current_year - year} years`;
   if (current_month - month === 1) return `${current_month - month} month`;
