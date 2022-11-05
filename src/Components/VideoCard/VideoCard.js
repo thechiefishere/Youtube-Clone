@@ -3,6 +3,7 @@ import './VideoCard.css';
 
 import { FaCheck } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import { addPrefixToNumber, getTimeframe } from '../../Utils/functions';
 
 export class VideoCard extends Component {
   renderCard() {
@@ -13,10 +14,12 @@ export class VideoCard extends Component {
       videoName,
       channelName,
       views,
-      time,
+      timePosted,
       isVerified,
       videoId,
     } = this.props.videoInfo;
+    const viewPrefix = addPrefixToNumber(views);
+    const timeFrame = getTimeframe(timePosted);
 
     return (
       <Link to={`/watch?v=${videoId}`}>
@@ -33,10 +36,10 @@ export class VideoCard extends Component {
                 <p>{channelName}</p>
                 {isVerified && <FaCheck />}
               </div>
-              <div>
-                <p>{views} views</p>
+              <div className='VideoCard-ViewsContainer'>
+                <p>{viewPrefix} views</p>
                 <p>.</p>
-                <p>{time}</p>
+                <p>{timeFrame} ago</p>
               </div>
             </div>
           </div>

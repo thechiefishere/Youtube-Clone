@@ -125,4 +125,50 @@ export const separateVideoOptions = (videoOptions, screenWidth) => {
   };
 };
 
-export const getTimeframe = (date) => {};
+export const getTimeframe = (date) => {
+  console.log('date', date);
+  const currentDate = new Date();
+  console.log('currentDate', currentDate);
+  const [month, day, year, hour, minute, seconds] = [
+    date.getMonth(),
+    date.getDate(),
+    date.getFullYear(),
+    date.getHours(),
+    date.getMinutes(),
+    date.getSeconds(),
+  ];
+  const [
+    current_month,
+    current_day,
+    current_year,
+    current_hour,
+    current_minute,
+    current_seconds,
+  ] = [
+    currentDate.getMonth(),
+    currentDate.getDate(),
+    currentDate.getFullYear(),
+    currentDate.getHours(),
+    currentDate.getMinutes(),
+    currentDate.getSeconds(),
+  ];
+
+  console.log('year', year);
+  console.log('current year', current_year);
+  if (current_year - year === 1) return `${current_year - year} year`;
+  if (current_year - year > 1) return `${current_year - year} years`;
+  if (current_month - month === 1) return `${current_month - month} month`;
+  if (current_month - month > 1) return `${current_month - month} months`;
+  if (current_day - day === 1) return `${current_day - day} day`;
+  if (current_day - day > 1) return `${current_day - day} days`;
+  if (current_hour - hour === 1) return `${current_hour - hour} hour`;
+  if (current_hour - hour > 1) return `${current_hour - hour} hours`;
+  if (current_minute - minute === 1) return `${current_minute - minute} minute`;
+  if (current_minute - minute > 1) return `${current_minute - minute} minutes`;
+  if (current_seconds - seconds === 1)
+    return `${current_seconds - seconds} months`;
+  if (current_seconds - seconds > 1)
+    return `${current_seconds - seconds} months`;
+
+  return '0 sec';
+};

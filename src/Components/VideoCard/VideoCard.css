@@ -18,12 +18,17 @@
     padding: 2px 6px;
     border-radius: 3px;
 }
+.VideoCard-ViewsContainer {
+    display: flex;
+}
+.VideoCard-ViewsContainer p{
+    margin-right: 5px;
+}
 
 @media (min-width: 512px) {
     .VideoCard {
         width: 48.5%;
         margin: 15px 0;
-
     }
 }
 
