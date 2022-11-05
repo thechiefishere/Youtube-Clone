@@ -22,6 +22,7 @@ export class VideoPage extends Component {
     this.state = {
       video: {},
       channel: {},
+      miniDescription: true,
     };
   }
 
@@ -38,12 +39,38 @@ export class VideoPage extends Component {
     this.setState({ channel: videoChannel });
   }
 
-  renderVideoDetails() {
+  renderVideoDescription() {
+    const {
+      video: { videoDescription },
+    } = this.state;
+    const { miniDescription } = this.state;
+    const desciption = miniDescription
+      ? videoDescription.substring(0, 200)
+      : videoDescription.substring();
+    const buttonType = miniDescription ? 'Show More' : 'Show Less';
+
     return (
-      <section>
-        <p>Number of views and date posted</p>
-        <p>Video Description</p>
-        <p>Show More or Show Less Button</p>
+      <div>
+        {desciption}
+        <div
+          className='VideoDescription-Btn'
+          onClick={() => this.setState({ miniDescription: !miniDescription })}
+        >
+          {buttonType}
+        </div>
+      </div>
+    );
+  }
+
+  renderVideoDetails() {
+    const { views, timePosted } = this.state.video;
+
+    return (
+      <section className='VideoDetails'>
+        <p>
+          {views.toLocaleString()}views <span>{timePosted.toDateString()}</span>
+        </p>
+        {this.renderVideoDescription()}
       </section>
     );
   }

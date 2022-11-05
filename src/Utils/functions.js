@@ -124,3 +124,5 @@ export const separateVideoOptions = (videoOptions, screenWidth) => {
     optionsToHide,
   };
 };
+
+export const getTimeframe = (date) => {};

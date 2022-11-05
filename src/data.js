@@ -98,6 +98,42 @@ export const channelData = [
         likes: 54590,
         disLikes: 2080,
         thumbnail: '/images/thumbnails/thumbnail1.png',
+        videoDescription: `I have all the graphics from this video up on my website if you want to digest them more! - https://everydayastronaut.com/?p=9398...
+
+        We’re at a really exciting time where the number of crewed vehicles going to the international space station will go from just one to three!. The Soyuz’s 8 year monopoly for getting humans to the ISS is coming to an end.
+        
+        So today we’re going to take a deep dive on the two new spaceships that will be responsible for taking humans to and from the International Space Station from the United States. We’ll compare the Boeing Starliner riding an Atlas V rocket to SpaceX’s Crew Dragon on their Falcon 9 Rocket.
+        
+        And to see how we’ve progressed in the world of human spaceflight, we’ll also compare all these systems along side Russia’s Soyuz capsule and the United State’s retired Space Shuttle in a side by side comparison.
+        
+        We’ll look at the designs, the rockets they’ll ride, dimensions, cost, safety considerations, and any other unique features that each vehicle offers.
+        
+        Considering I’ve been up close and personal with SpaceX’s Crew Dragon Capsule, and Boeing’s Starliner, I’ve got some good insight on some of these vehicles.
+        
+        00:00 - Intro
+        02:22 - Boeing Starliner
+        10:15 - Dragon Capsule
+        18:59 - Side By Side Comparison
+        26:00 - Conclusion
+        
+        --------------------------------------------------------------------
+        
+        Thanks for the AWESOME renders! They TRULY made this video special!!!
+        Reese Carges - @AstroReeseW
+        Lionel Oullette - @ArcturusVFX
+        
+        Show your support by becoming a Patreon - http://patreon.com/everydayastronaut
+        This video had four "Moon Walkers" who helped make this possible - Blake Jacobs, Mac Malkawi, David Osojnik and Matthew Nolan.
+        
+        The best place for all your space merch needs!
+        https://everydayastronaut.com/shop/
+        
+        All music is original! Check out my album "Maximum Aerodynamic Pressure" anywhere you listen to music (Spotify, iTunes, Google Play, Amazon, etc) or click here for easy links - http://everydayastronaut.com/music
+        
+        And also check out "27 Merlins" a song composed to Falcon Heavy's sequence of events - https://youtu.be/0O9_k2_Wod4
+        
+        I'm the cohost of an awesome podcast where we talk all about current technologies and how they shape our future! http://ourludicrousfuture.com or here on YouTube https://www.youtube.com/ourludicrousf...
+        `,
         comments: [
           {
             channelId: 3,
@@ -169,6 +205,43 @@ export const channelData = [
         likes: 18020,
         disLikes: 300,
         thumbnail: '/images/thumbnails/thumbnail2.png',
+        videoDescription: `Today we’re getting up close and personal with SpaceX’s Raptor 2 engine with Elon Musk. We get into all sorts of details on this engine including how exactly it’s been upgraded and simplified compared to Raptor 1.
+
+        This video has a ton of fun details on some fairly technical stuff, so be sure and watch my "Why don’t rocket engines melt" video - https://youtu.be/he_BL6Q5u1Y - so you know what we’re talking about with some of the cooling techniques as well as my video on engine cycles - https://youtu.be/Owji-ukVt9M - so you understand how the Raptor’s full flow staged combustion cycle works and why it’s advantageous!
+        
+        00:00 - Intro
+        00:50 - Conversation Starts
+        02:00 - Raptor 1 vs Raptor 2
+        03:50 - Thrust and Chamber Pressure
+        05:30 - Iteration Philosophy
+        06:30 - Melting Engines and Cooling
+        09:30 - Torch Igniters and Starting
+        13:00 - Full Flow Advantages
+        15:30 - Swirl Injectors
+        16:40 - Thrust Vector Control
+        20:30 - Simplifications
+        24:50 - Removing Throat Film Cooling
+        25:35 - Boost Pumps and Impellers
+        30:35 - Inline Powerhead Discussion
+        32:15 - Fluorine, Dual Cooling and Aerospikes
+        35:00 - Chamber Pressure and Impulse
+        40:00 - Outro
+        
+        --------------------------
+        
+        Want to support what I do? Consider becoming a Patreon supporter for access to exclusive livestreams, our discord channel! - http://patreon.com/everydayastronaut
+        
+        And extra big thanks to our Mission Directors! Get your name in the credits by becoming a Mission Director on Patreon! 
+        
+        Mac Malkawi, Ole Mathias Aarseth Heggem, Tomdmay, TTTA, Max Haot, John Malkin, DLB, Héctor Ramos, David Glover, Simon Pilkington, Tristan Edwards, Arthur Carty, Frans de Wet, Chad Souter, Sam Fisher, Chris Dibbs, Seth Pascale, Manalope , Vincent Argiro, Taron Lexton, Corey Coddington, Tim Engle, Ares Lovlyn, David A. Greer, Robin Haerens, Mark Krieger, Roger Oldfield, Ruben Maier-Gerber, Vignan Velivela, Damian Borth, Scott Ferreira, Steven Hosac, Bravishma Narayan, Eric Johnson, Robert Maynard, Dakota Flemmer, John, Ryan Vandervoort, 
+        Justin Hook, Barney, Gautham
+        
+        Or become a YouTube member for some bonus perks as well! - https://www.youtube.com/channel/UC6uK...
+        
+        The best place for all your space merch needs!
+        https://everydayastronaut.com/shop/
+        
+        All music is original! Check out my album "Maximum Aerodynamic Pressure" anywhere you listen to music (Spotify, iTunes, Google Play, Amazon, etc) or click here for easy links - http://everydayastronaut.com/music`,
         comments: [
           {
             channelId: 3,
@@ -246,6 +319,41 @@ export const channelData = [
         likes: 599,
         disLikes: 46,
         thumbnail: '/images/thumbnails/thumbnail3.png',
+        videoDescription: `Review widgets are one of the most common elements you will add to any ecommerce page which is why it is important to be able to create them well. In this video I attempt to copy a design for a review widget while also adding fancy animations to the widget. This is my first time attempting to solve this issue so you can see my thought process and how I go about debugging and solving this problem.
+
+
+        📚 Materials/References:
+        
+        GitHub Code: https://github.com/WebDevSimplified/a...
+        Reference Design: https://uidesigndaily.com/posts/figma...
+        
+        
+        🌎 Find Me Here:
+        
+        My Blog: https://blog.webdevsimplified.com
+        My Courses: https://courses.webdevsimplified.com
+        Patreon: https://www.patreon.com/WebDevSimplified
+        Twitter: https://twitter.com/DevSimplified
+        Discord: https://discord.gg/7StTjnR
+        GitHub: https://github.com/WebDevSimplified
+        CodePen: https://codepen.io/WebDevSimplified
+        
+        
+        ⏱️ Timestamps:
+        
+        00:00 - Introduction
+        00:42 - Setup
+        01:07 - Planning
+        03:18 - Card CSS
+        05:32 - Card Header
+        16:04 - Search Bar
+        25:59 - Review Section HTML/CSS
+        37:39 - Review Button
+        40:34 - JavaScript Review Rendering
+        59:37 - Animations
+        
+        
+        #CSS #WDS #LiveCoding`,
         comments: [
           {
             channelId: 3,
@@ -294,6 +402,23 @@ export const channelData = [
         likes: 60040,
         disLikes: 246,
         thumbnail: '/images/thumbnails/thumbnail4.png',
+        videoDescription: `In this video we will cover everything you need to know about JSON in only 10 minutes. We will cover what JSON is, why JSON is important, what JSON is used for, the syntax of JSON, and multiple examples of JSON. JSON is the most popular data representation format, and is one of the most important, and easiest concepts you can learn in programming. It allows you to create APIs, config files, and structured data. We will be covering all of the terminology, and going through live examples of all the different JSON types.
+
+
+        Learn X in Y Minutes Playlist:
+        http://bit.ly/2RscdMZ
+        
+        Twitter:
+        https://twitter.com/DevSimplified
+        
+        GitHub:
+        https://github.com/WebDevSimplified
+        
+        CodePen:
+        https://codepen.io/WebDevSimplified
+        
+        
+        #JSON #WebDevelopment #Programming`,
         comments: [
           {
             channelId: 2,
@@ -378,6 +503,7 @@ export const channelData = [
         likes: 190456,
         disLikes: 28900,
         thumbnail: '/images/thumbnails/thumbnail5.png',
+        videoDescription: `Tim Kennedy tells Joe what he's learned doing his show "Hunting Hitler".`,
         comments: [
           {
             channelId: 2,
@@ -447,6 +573,8 @@ export const channelData = [
         likes: 36789,
         disLikes: 2190,
         thumbnail: '/images/thumbnails/thumbnail6.png',
+        videoDescription: `Taken from JRE #1840 w/Marc Andreessen:
+        https://open.spotify.com/episode/2JDW...`,
         comments: [
           {
             channelId: 6,
@@ -539,6 +667,11 @@ export const channelData = [
         likes: 55060,
         disLikes: 1259,
         thumbnail: '/images/thumbnails/thumbnail7.png',
+        videoDescription: `In this Git tutorial we will talk about what exactly Git is and we will look at and work with all of the basic and most important commands such as add, commit, status, push and more. This tutorial is very beginner friendly.
+
+        DONATIONS:
+        We spend huge amounts of time making these videos available for free. Any donation is greatly appreciated 
+        https://www.paypal.com/cgi-bin/webscr...`,
         comments: [
           {
             channelId: 1,
@@ -594,6 +727,29 @@ export const channelData = [
         likes: 1390,
         disLikes: 12,
         thumbnail: '/images/thumbnails/thumbnail8.png',
+        videoDescription: `In this video, we will talk about execution context and hoisting
+
+        💻 My Courses & More
+        https://traversymedia.com
+        
+        💖  Show Support
+        Patreon: https://www.patreon.com/traversymedia
+        PayPal: https://paypal.me/traversymedia
+        
+        👇 Follow Me On Social Media:
+        Twitter: https://twitter.com/traversymedia
+        Instagram: https://www.instagram.com/traversymedia
+        Linkedin: https://www.linkedin.com/in/bradtraversy
+        
+        Timestamps
+        0:00 - Intro
+        0:44 - What Is Execution Context?
+        1:39 - The 2 Phases
+        3:32 - Step By Step Examination
+        6:12 - Examine Creation In Browser
+        7:32 - Step-Through Execution
+        8:52 - Hoisting
+        11:26 - var vs let & const`,
         comments: [
           {
             channelId: 1,
@@ -662,6 +818,9 @@ export const channelData = [
         likes: 79456,
         disLikes: 12800,
         thumbnail: '/images/thumbnails/thumbnail9.png',
+        videoDescription: `On Thursday, February 10 SpaceX CEO Elon Musk will provide an update on the design, development, and testing of Starship.
+
+        You can watch the event live at approximately 8:00 p.m. CDT.`,
         comments: [
           {
             channelId: 2,
@@ -716,6 +875,7 @@ export const channelData = [
         likes: 136700,
         disLikes: 8909,
         thumbnail: '/images/thumbnails/thumbnail10.png',
+        videoDescription: ``,
         comments: [
           {
             channelId: 6,
@@ -807,6 +967,52 @@ export const channelData = [
         likes: 514890,
         disLikes: 33200,
         thumbnail: '/images/thumbnails/thumbnail11.png',
+        videoDescription: `A general solution to the cubic equation was long considered impossible, until we gave up the requirement that math reflect reality. This video is sponsored by Brilliant. The first 200 people to sign up via https://brilliant.org/veritasium get 20% off a yearly subscription.
+
+        Thanks to Dr Amir Alexander, Dr Alexander Kontorovich, Dr Chris Ferrie, and Dr Adam Becker for the helpful advice and feedback on the earlier versions of the script. 
+        
+        ▀▀▀
+        References:
+        Some great videos about the cubic:
+        
+        500 years of not teaching the cubic formula. -- https://youtu.be/N-KXStupwsc
+        
+        Imaginary Numbers are Real -- https://youtu.be/T647CGsuOVU
+        
+        Dunham, W. (1990). Journey through genius: The great theorems of mathematics. New York. -- https://ve42.co/Dunham90
+        
+        Toscano, F. (2020). The Secret Formula. Princeton University Press. -- https://ve42.co/Toscano2020
+        
+        Bochner, S. (1963). The significance of some basic mathematical conceptions for physics. Isis, 54(2), 179-205. -- https://ve42.co/Bochner63
+        
+        Muroi, K. (2019). Cubic equations of Babylonian mathematics. arXiv preprint arXiv:1905.08034. -- https://ve42.co/Murio21
+        
+        Branson, W. Solving the cubic with Cardano, -- https://ve42.co/Branson2014
+        
+        Rothman, T. (2013). Cardano v Tartaglia: The Great Feud Goes Supernatural. arXiv preprint arXiv:1308.2181. -- https://ve42.co/Rothman
+        
+        Vali Siadat, M., & Tholen, A. (2021). Omar Khayyam: Geometric Algebra and Cubic Equations. Math Horizons, 28(1), 12-15. -- https://ve42.co/Siadat21
+        
+        Merino, O. (2006). A short history of complex numbers. University of Rhode Island. -- https://ve42.co/Merino2006
+        
+        Cardano, G (1545), Ars magna or The Rules of Algebra, Dover (published 1993), ISBN 0-486-67811-3
+        
+        Bombelli, R (1579) L’Algebra https://ve42.co/Bombelli
+        
+        The Manim Community Developers. (2021). Manim – Mathematical Animation Framework (Version v0.13.1) [Computer software]. https://www.manim.community/
+        
+        ▀▀▀
+        Special thanks to Patreon supporters: Luis Felipe, Anton Ragin, Paul Peijzel, S S, Benedikt Heinen, Diffbot, Micah Mangione, Juan Benet, Ruslan Khroma, Richard Sundvall, Lee Redden, Sam Lutfi, MJP, Gnare, Nick DiCandilo, Dave Kircher, Edward Larsen, Burt Humburg, Blake Byers, Dumky, Mike Tung, Evgeny Skvortsov, Meekay, Ismail Öncü Usta, Crated Comments, Anna, Mac Malkawi, Michael Schneider, Oleksii Leonov, Jim Osmun, Tyson McDowell, Ludovic Robillard, Jim buckmaster, fanime96, Ruslan Khroma, Robert Blum, Vincent, Marinus Kuivenhoven, Alfred Wallace, Arjun Chakroborty, Joar Wandborg, Clayton Greenwell, Pindex, Michael Krugman, Cy 'kkm' K'Nelson,Ron Neal 
+        
+        Executive Producer: Derek Muller
+        Writers: Derek Muller, Alex Kontorovich, Stephen Welch, Petr Lebedev
+        Animators: Fabio Albertelli, Jakub Misiek, Iván Tello, Jesús Rascón
+        SFX: Shaun Clifford
+        Camerapeople: Derek Muller, Emily Zhang
+        Editors: Derek Muller, Petr Lebedev
+        Producers: Derek Muller, Petr Lebedev, Emily Zhang
+        Additional video supplied by Getty Images
+        Music from Epidemic Sound and Jonny Hyman`,
         comments: [
           {
             channelId: 5,
@@ -880,6 +1086,7 @@ export const channelData = [
         likes: 43560,
         disLikes: 8909,
         thumbnail: '/images/thumbnails/thumbnail12.png',
+        videoDescription: `To see what this looks like from under a glass table, see http://www.youtube.com/watch?v=E9WUaB...`,
         comments: [
           {
             channelId: 2,
