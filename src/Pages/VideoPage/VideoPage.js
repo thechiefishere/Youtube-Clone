@@ -6,10 +6,11 @@ import {
   getVideoChannelFromVideoID,
   getVideoFromVideoID,
 } from '../../Utils/functions';
-import { channelData } from '../../data';
+import { channelData, suggestionFilters } from '../../data';
 import './VideoPage.css';
 import VideoOption from '../../Components/VideoOptions/VideoOption';
 import VideoCard from '../../Components/VideoCard/VideoCard';
+import VideoFilters from '../../Components/VideoFilters/VideoFilters';
 
 export class VideoPage extends Component {
   constructor(props) {
@@ -138,6 +139,7 @@ export class VideoPage extends Component {
 
     return (
       <section>
+        <VideoFilters filters={suggestionFilters} />
         {filteredVideos.map((video) => (
           <VideoCard type='Horizontal' key={video.videoId} videoInfo={video} />
         ))}

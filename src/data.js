@@ -1184,6 +1184,16 @@ export const filters = [
   'Jordan Peterson',
 ];
 
+export const suggestionFilters = [
+  'All',
+  'Thought',
+  'Listenable',
+  'Related',
+  'Live',
+  'Recently uploaded',
+  'Watched',
+];
+
 export const videoOptions = [
   {
     name: 'Likes',

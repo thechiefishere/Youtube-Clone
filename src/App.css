@@ -32,7 +32,7 @@
 .Icon_sidebar {
     font-size: 1.7em;
 }
-.Icon_homeContentFilter {
+.Icon_filter {
     background-color: rgba(255, 255, 255, 200);
     padding: 10px;
     position: absolute;
@@ -43,11 +43,11 @@
 
     z-index: 3;
 }
-.Icon_homeContentFilter:first-of-type {
+.Icon_filter:first-of-type {
     left: 0;
     display: none;
 }
-.Icon_homeContentFilter:last-of-type {
+.Icon_filter:last-of-type {
     right: -10px;
 }
 .Youtube-LogoContainer {
