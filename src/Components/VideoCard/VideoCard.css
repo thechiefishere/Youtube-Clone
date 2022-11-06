@@ -51,12 +51,19 @@
 }
 
 /* Horizontal Video Card Styles*/
+.VideoCard_horizontal {
+    margin: 0px;
+    margin-bottom: 15px;
+}
 .VideoCard_horizontal .VideoCard-Wrapper {
     display: flex;
 }
 .VideoCard_horizontal .VideoCard-Video {
     flex-basis: 20%;
     margin-right: 10px;
+}
+.VideoCard_horizontal .VideoCard-Description {
+    margin-top: 0px;
 }
 .VideoCard_horizontal .VideoCard-Description img {
     display: none;
@@ -65,17 +72,17 @@
 @media (min-width: 512px) {
     .VideoCard {
         width: 48.5%;
-        margin: 15px 0;
+        margin: 15px 0px;
     }
     .VideoCard_horizontal {
         width: 100%;
+        margin-top: 0px;
     }
 }
 
 @media (min-width: 888px) {
     .VideoCard {
         width: 32%;
-        margin: 15px 0;
     }
     .VideoCard_horizontal {
         width: 100%;
@@ -85,9 +92,9 @@
 @media (min-width: 1146px) {
     .VideoCard {
         width: 24%;
-        margin: 15px 0;
     }
     .VideoCard_horizontal {
         width: 100%;
+        
     }
 }
