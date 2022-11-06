@@ -18,12 +18,13 @@ export class VideoCard extends Component {
       channelData,
       videoId
     );
+
     const viewPrefix = addPrefixToNumber(views);
     const timeFrame = getTimeframe(timePosted);
 
     return (
       <Link to={`/watch?v=${videoId}`}>
-        <div>
+        <div className='VideoCard-Wrapper'>
           <div className='VideoCard-Video'>
             <img src={thumbnail} alt={videoName} />
             <p>{videoLength}</p>
@@ -49,7 +50,11 @@ export class VideoCard extends Component {
   }
 
   render() {
-    return <section className='VideoCard'>{this.renderCard()}</section>;
+    const { type } = this.props;
+    const cardType = type === 'Horizontal' ? 'VideoCard_horizontal' : '';
+    return (
+      <section className={`VideoCard ${cardType}`}>{this.renderCard()}</section>
+    );
   }
 }
 

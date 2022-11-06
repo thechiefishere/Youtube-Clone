@@ -1,12 +1,7 @@
 import React, { Component } from 'react';
-import { HiDownload } from 'react-icons/hi';
-import { BiLike, BiDislike } from 'react-icons/bi';
-import { RiShareForwardLine } from 'react-icons/ri';
-import { TbPlaylistAdd } from 'react-icons/tb';
-import { IoFlagOutline } from 'react-icons/io';
-import { CgTranscript } from 'react-icons/cg';
 import {
   addPrefixToNumber,
+  getAllVideos,
   getVideoAssociatedPlaylist,
   getVideoChannelFromVideoID,
   getVideoFromVideoID,
@@ -14,6 +9,7 @@ import {
 import { channelData } from '../../data';
 import './VideoPage.css';
 import VideoOption from '../../Components/VideoOptions/VideoOption';
+import VideoCard from '../../Components/VideoCard/VideoCard';
 
 export class VideoPage extends Component {
   constructor(props) {
@@ -134,7 +130,20 @@ export class VideoPage extends Component {
     );
   }
 
-  renderSuggested() {}
+  renderSuggested() {
+    const { videoId } = this.state.video;
+    const filteredVideos = getAllVideos(channelData).filter(
+      (video) => video.videoId !== videoId
+    );
+
+    return (
+      <section>
+        {filteredVideos.map((video) => (
+          <VideoCard type='Horizontal' key={video.videoId} videoInfo={video} />
+        ))}
+      </section>
+    );
+  }
 
   renderComments() {}
 
@@ -144,7 +153,12 @@ export class VideoPage extends Component {
       return <section></section>;
     }
 
-    return <section className='VideoPage'>{this.renderVideoSection()}</section>;
+    return (
+      <section className='VideoPage'>
+        {this.renderVideoSection()}
+        {this.renderSuggested()}
+      </section>
+    );
   }
 
   render() {
