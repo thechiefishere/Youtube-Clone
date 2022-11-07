@@ -11,6 +11,7 @@ import './VideoPage.css';
 import VideoOption from '../../Components/VideoOptions/VideoOption';
 import VideoCard from '../../Components/VideoCard/VideoCard';
 import VideoFilters from '../../Components/VideoFilters/VideoFilters';
+import CommentCard from '../../Components/CommentCard/CommentCard';
 
 export class VideoPage extends Component {
   constructor(props) {
@@ -147,7 +148,17 @@ export class VideoPage extends Component {
     );
   }
 
-  renderComments() {}
+  renderComments() {
+    const { comments } = this.state.video;
+
+    return (
+      <section className='Comments'>
+        {comments.map((comment, index) => (
+          <CommentCard comment={comment} key={index} />
+        ))}
+      </section>
+    );
+  }
 
   renderVideoPage() {
     const { video } = this.state;
@@ -159,6 +170,7 @@ export class VideoPage extends Component {
       <section className='VideoPage'>
         {this.renderVideoSection()}
         {this.renderSuggested()}
+        {this.renderComments()}
       </section>
     );
   }

@@ -168,3 +168,9 @@ export const getTimeframe = (date) => {
 
   return '0 sec';
 };
+
+export const getChannelFromChannelID = (channels, channelID) => {
+  const channel = channels.find((aChannel) => aChannel.channelId === channelID);
+
+  return channel;
+};
