@@ -421,7 +421,7 @@ export const channelData = [
         #JSON #WebDevelopment #Programming`,
         comments: [
           {
-            channelId: 2,
+            channelId: 4,
             comment:
               "That was such a professionally styled tutorial video! You got full control over what you're gonna go through and you present with simple examples! It has not been often I've seen performance like this on a channel of this size. You deserve to be much bigger, and I hope many more people will get to see this and benefit from it! Keep it up!",
             likes: 209,

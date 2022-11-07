@@ -12,6 +12,7 @@ import VideoOption from '../../Components/VideoOptions/VideoOption';
 import VideoCard from '../../Components/VideoCard/VideoCard';
 import VideoFilters from '../../Components/VideoFilters/VideoFilters';
 import CommentCard from '../../Components/CommentCard/CommentCard';
+import Comments from '../../Components/Comments/Comments';
 
 export class VideoPage extends Component {
   constructor(props) {
@@ -148,29 +149,32 @@ export class VideoPage extends Component {
     );
   }
 
-  renderComments() {
-    const { comments } = this.state.video;
+  // renderComments() {
+  //   const { comments } = this.state.video;
 
-    return (
-      <section className='Comments'>
-        {comments.map((comment, index) => (
-          <CommentCard comment={comment} key={index} />
-        ))}
-      </section>
-    );
-  }
+  //   return (
+  //     <section className='Comments'>
+
+  //       {comments.map((comment, index) => (
+  //         <CommentCard comment={comment} key={index} />
+  //       ))}
+  //     </section>
+  //   );
+  // }
 
   renderVideoPage() {
     const { video } = this.state;
     if (Object.entries(video).length === 0) {
       return <section></section>;
     }
+    const { comments } = this.state.video;
 
     return (
       <section className='VideoPage'>
         {this.renderVideoSection()}
         {this.renderSuggested()}
-        {this.renderComments()}
+        <Comments comments={comments} />
+        {/* {this.renderComments()} */}
       </section>
     );
   }

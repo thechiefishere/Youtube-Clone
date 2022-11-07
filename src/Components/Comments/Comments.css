@@ -1,0 +1,26 @@
+.Comments-Filter {
+    display: flex;
+    align-items: center;
+    font-size: 1.4em;
+    margin-bottom: 20px;
+}
+.Comments-Filter > p {
+    margin-right: 30px;
+}
+.AddComment {
+    display: flex;
+    align-items: center;
+}
+.AddComment input {
+    outline: none;
+    border: 0px;
+    border-bottom: 1px solid #000;
+    margin-bottom: 10px;
+    width: 90%;
+}
+.Icon_addComment {
+    font-size: 3.5em;
+    margin-right: 10px;
+    background-color: rgb(212, 212, 248);
+    border-radius: 50%;
+}
